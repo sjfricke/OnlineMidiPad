@@ -19,7 +19,7 @@ musicApp.factory('Note', function(){
     
     //play from controller
     Note.prototype.play = function(){
-        play(this.song, this.pad, false);
+        play(this.song, this.pad, false, false);
     };
     
     //takes in pad to update CSS
@@ -30,17 +30,18 @@ musicApp.factory('Note', function(){
     }
     
     //plays from within object itelf
-    var play = function(song, pad, loop){
-        if (song.currentTime === 0 || song.currentTime === song.duration){
+    var play = function(song, pad, loop, spam){
+        if (song.currentTime === 0 || song.currentTime === song.duration || spam){
             if(!loop){
                 //takes in loop as true if shift is clicked
                 song.loop = false;
             }
+            song.volume = volumeGlobal;
             song.play();
             song.onended = function() {
                 document.getElementById(pad).style.backgroundColor = "";
             }
-            document.getElementById(pad).style.backgroundColor = "blue";
+            document.getElementById(pad).style.backgroundColor = colorSelection;
         }
         else {
             song.loop = false;
@@ -54,7 +55,7 @@ musicApp.factory('Note', function(){
         if(this.song.loop === false){
             restart(this.song, this.pad);
             this.song.loop = true;
-            play(this.song, this.pad, true);
+            play(this.song, this.pad, true, false);
         }
         else{
             this.song.loop = false;
@@ -62,6 +63,11 @@ musicApp.factory('Note', function(){
         }
         
     
+    };
+    
+    Note.prototype.spam = function(){
+        this.song.load();
+        play(this.song, this.pad, false, true);
     };
     
     return Note;

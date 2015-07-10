@@ -25,28 +25,45 @@ Things to do:
       
 
     <!-- JS -->
+    <script>var colorSelection = 'blue'; var volumeGlobal = .80;</script>
     <script src="js/app.js" type="text/javascript"></script>
     <script src="js/controllers.js" type="text/javascript"></script>
     <script src="js/note.js" type="text/javascript"></script>
+    <script src="js/color.js" type="text/javascript"></script>
+    <script src="js/wNumb.js" type="text/javascript"></script>
           
     <!--Google Material Design-->
     <link rel="stylesheet" href="./mdl/material.min.css">
     <script src="./mdl/material.min.js"></script>
-    <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons"> 
 
-      
-      
+    <!-- noUIslider -->
+    <link href="lib/nouislider.min.css" rel="stylesheet">
 
-   
+
   </head>
   <body ng-app='musicApp'>
-    
-    <div id="info">
-        Online Launch Pad by Spencer Fricke 
-        <br><br>
-        Hold shift to loop
-    </div>  
+    <div ng-controller="infoController">
+        <div id="info">
+            Online Launch Pad by Spencer Fricke 
+            <br><br>
+            Hold shift to loop
+            <br><br>
+            Hold 'J' to mash those buttons
+            <div id="colorpicker" ng-show="newColor">
+                <div class="sliders" id="red"></div>
+                <div class="sliders" id="green"></div>
+                <div class="sliders" id="blue"></div>
+
+                <div id="result" class="result"></div>
+            </div>
+
+        </div>
+        <div id="colorChange" ng-click="colorSwitch()">  
+        </div>
+    </div>
     <div ng-controller="audioPlayController as audio">
+        <div class="volume" id="volume"></div>
         <img id="pad" src="img/pad.jpg"/>
         <div class="row1">
           <div id="pad1" ng-click="padplay('pad1')">
@@ -122,7 +139,10 @@ Things to do:
         </div>
         <div id="keyHint" ng-click="keyHints()">  
         </div>
+        
     </div>
       <div ng-controller="keyboardController"></div>
+      <!-- noUIslider -->
+      <script src="lib/nouislider.min.js"></script>
   </body>
 </html>

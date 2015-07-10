@@ -16,23 +16,48 @@ musicApp.controller('audioPlayController', function($scope, allNotes) {
         if (event.shiftKey){
             allNotes[pad].loop();
         }
+        else if ($scope.spam){
+            allNotes[pad].spam();
+        }
         else{
             allNotes[pad].play();
         }
     };
     
- 
-  
+    window.addEventListener('keydown', function(event) {
+        if (event.keyCode == 74){
+            $scope.spam = true;
+        }
+    });
+    window.addEventListener('keyup', function(event) {
+        if (event.keyCode == 74){
+            $scope.spam = false;
+        }
+    });
 });
 
 //seperate controller for keyboard input
 musicApp.controller('keyboardController', function($scope, allNotes) {
     
     window.addEventListener('keydown', function(event) {
+        if (event.keyCode == 74){
+            $scope.spam = true;
+        }
+    });
+    window.addEventListener('keyup', function(event) {
+        if (event.keyCode == 74){
+            $scope.spam = false;
+        }
+    });
+    
+    window.addEventListener('keydown', function(event) {
     switch (event.keyCode) {
     case 49: // 1
         if (event.shiftKey){
             allNotes.pad13.loop();
+        }
+        else if ($scope.spam){
+            allNotes.pad13.spam();
         }
         else{
             allNotes.pad13.play();
@@ -42,6 +67,9 @@ musicApp.controller('keyboardController', function($scope, allNotes) {
         if (event.shiftKey){
             allNotes.pad14.loop();
         }
+        else if ($scope.spam){
+            allNotes.pad14.spam();
+        }
         else{
             allNotes.pad14.play();
         }
@@ -49,6 +77,8 @@ musicApp.controller('keyboardController', function($scope, allNotes) {
     case 51: // 3
         if (event.shiftKey){
             allNotes.pad15.loop();
+        }else if ($scope.spam){
+            allNotes.pad15.spam();
         }
         else{
             allNotes.pad15.play();
@@ -57,6 +87,8 @@ musicApp.controller('keyboardController', function($scope, allNotes) {
     case 52: // 4
         if (event.shiftKey){
             allNotes.pad16.loop();
+        }else if ($scope.spam){
+            allNotes.pad16.spam();
         }
         else{
             allNotes.pad16.play();
@@ -65,6 +97,8 @@ musicApp.controller('keyboardController', function($scope, allNotes) {
     case 81: // q
         if (event.shiftKey){
             allNotes.pad9.loop();
+        }else if ($scope.spam){
+            allNotes.pad9.spam();
         }
         else{
             allNotes.pad9.play();
@@ -73,6 +107,8 @@ musicApp.controller('keyboardController', function($scope, allNotes) {
     case 87: // w
         if (event.shiftKey){
             allNotes.pad10.loop();
+        }else if ($scope.spam){
+            allNotes.pad10.spam();
         }
         else{
             allNotes.pad10.play();
@@ -81,6 +117,8 @@ musicApp.controller('keyboardController', function($scope, allNotes) {
     case 69: // e
         if (event.shiftKey){
             allNotes.pad11.loop();
+        }else if ($scope.spam){
+            allNotes.pad11.spam();
         }
         else{
             allNotes.pad11.play();
@@ -89,6 +127,8 @@ musicApp.controller('keyboardController', function($scope, allNotes) {
     case 82: // r
         if (event.shiftKey){
             allNotes.pad12.loop();
+        }else if ($scope.spam){
+            allNotes.pad12.spam();
         }
         else{
             allNotes.pad12.play();
@@ -97,6 +137,8 @@ musicApp.controller('keyboardController', function($scope, allNotes) {
     case 65: // a
         if (event.shiftKey){
             allNotes.pad5.loop();
+        }else if ($scope.spam){
+            allNotes.pad5.spam();
         }
         else{
             allNotes.pad5.play();
@@ -105,6 +147,8 @@ musicApp.controller('keyboardController', function($scope, allNotes) {
     case 83: // s
         if (event.shiftKey){
             allNotes.pad6.loop();
+        }else if ($scope.spam){
+            allNotes.pad6.spam();
         }
         else{
             allNotes.pad6.play();
@@ -113,6 +157,8 @@ musicApp.controller('keyboardController', function($scope, allNotes) {
     case 68: // d
         if (event.shiftKey){
             allNotes.pad7.loop();
+        }else if ($scope.spam){
+            allNotes.pad7.spam();
         }
         else{
             allNotes.pad7.play();
@@ -121,6 +167,8 @@ musicApp.controller('keyboardController', function($scope, allNotes) {
     case 70: // f
         if (event.shiftKey){
             allNotes.pad8.loop();
+        }else if ($scope.spam){
+            allNotes.pad8.spam();
         }
         else{
             allNotes.pad8.play();
@@ -129,6 +177,8 @@ musicApp.controller('keyboardController', function($scope, allNotes) {
     case 90: // z
         if (event.shiftKey){
             allNotes.pad1.loop();
+        }else if ($scope.spam){
+            allNotes.pad1.spam();
         }
         else{
             allNotes.pad1.play();
@@ -137,6 +187,8 @@ musicApp.controller('keyboardController', function($scope, allNotes) {
     case 88: // x
         if (event.shiftKey){
             allNotes.pad2.loop();
+        }else if ($scope.spam){
+            allNotes.pad2.spam();
         }
         else{
             allNotes.pad2.play();
@@ -145,6 +197,8 @@ musicApp.controller('keyboardController', function($scope, allNotes) {
     case 67: // c
         if (event.shiftKey){
             allNotes.pad3.loop();
+        }else if ($scope.spam){
+            allNotes.pad3.spam();
         }
         else{
             allNotes.pad3.play();
@@ -153,6 +207,8 @@ musicApp.controller('keyboardController', function($scope, allNotes) {
     case 86: // v
         if (event.shiftKey){
             allNotes.pad4.loop();
+        }else if ($scope.spam){
+            allNotes.pad4.spam();
         }
         else{
             allNotes.pad4.play();
@@ -162,4 +218,18 @@ musicApp.controller('keyboardController', function($scope, allNotes) {
   }
 }, false);
     
+});
+
+
+
+musicApp.controller('infoController', function($scope) {
+    $scope.colorSwitch = function(){
+        if(!$scope.newColor){
+            $scope.newColor = true;   
+        }
+        else{
+            $scope.newColor = false;
+        }
+    }
+  
 });
