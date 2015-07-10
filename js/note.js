@@ -36,7 +36,6 @@ musicApp.factory('Note', function(){
                 //takes in loop as true if shift is clicked
                 song.loop = false;
             }
-            song.volume = volumeGlobal;
             song.play();
             song.onended = function() {
                 document.getElementById(pad).style.backgroundColor = "";
@@ -68,6 +67,10 @@ musicApp.factory('Note', function(){
     Note.prototype.spam = function(){
         this.song.load();
         play(this.song, this.pad, false, true);
+    };
+    
+    Note.prototype.setVolume = function(vol){
+    this.song.volume = vol;
     };
     
     return Note;

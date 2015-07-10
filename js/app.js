@@ -37,7 +37,6 @@ for ( var i = 0; i < sliders.length; i++ ) {
        
     });
     
-    slider.noUiSlider.on('slide', getVolume);
     
     
 });

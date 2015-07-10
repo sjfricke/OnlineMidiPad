@@ -24,6 +24,18 @@ musicApp.controller('audioPlayController', function($scope, allNotes) {
         }
     };
     
+    var slider = document.getElementById('volume');
+    $scope.volume = .8;
+    slider.noUiSlider.on('slide',function(){
+        var volumeSlider = document.getElementById('volume');
+    
+        $scope.volume = 1 - volumeSlider.noUiSlider.get();
+        for (i = 1; i <= 16; i++){
+            var pad = 'pad' + i;
+            allNotes[pad].setVolume($scope.volume);
+        }
+    });
+    
     window.addEventListener('keydown', function(event) {
         if (event.keyCode == 74){
             $scope.spam = true;

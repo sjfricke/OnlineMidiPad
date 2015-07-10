@@ -20,10 +20,6 @@ function setColor(){
 
     }
     
-function getVolume(){
-    var volumeSlider = document.getElementById('volume');
-    
-    volumeGlobal = 1- volumeSlider.noUiSlider.get();
-}
+
 
     
