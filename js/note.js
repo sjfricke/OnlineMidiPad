@@ -1,5 +1,10 @@
+/*
+Note class
+Contains all playback and setting of each seperate note
+*/
 musicApp.factory('Note', function(){
 
+    //Constructer
     var Note = function(pad, key, music){
         this.pad = pad;
         this.key = key;
@@ -15,10 +20,9 @@ musicApp.factory('Note', function(){
     //play from controller
     Note.prototype.play = function(){
         play(this.song, this.pad, false);
-        
-        //document.getElementById(this.pad).style.backgroundColor = "blue";
     };
     
+    //takes in pad to update CSS
     var restart = function(song, pad){
         song.pause();
         song.load();
@@ -29,6 +33,7 @@ musicApp.factory('Note', function(){
     var play = function(song, pad, loop){
         if (song.currentTime === 0 || song.currentTime === song.duration){
             if(!loop){
+                //takes in loop as true if shift is clicked
                 song.loop = false;
             }
             song.play();

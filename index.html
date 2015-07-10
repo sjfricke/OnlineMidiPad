@@ -20,6 +20,9 @@ Things to do:
     <script src="lib/angular.js"></script> 
     <script src="lib/angular-route.js" type="text/javascript"></script>
       
+    <!--jQuery-->
+    <script src="lib/jquery-2.1.4.min.js"></script>
+      
 
     <!-- your app's js -->
     <script src="js/app.js" type="text/javascript"></script>
@@ -37,9 +40,15 @@ Things to do:
    
   </head>
   <body ng-app='musicApp'>
+    
+    <div id="info">
+        Online Launch Pad by Spencer Fricke 
+        <br><br>
+        Hold shift to loop
+    </div>  
     <div ng-controller="audioPlayController as audio">
         <img id="pad" src="img/pad.jpg"/>
-       <div class="row1">
+        <div class="row1">
           <div id="pad1" ng-click="padplay('pad1')">
               <br><br>
               {{keyHint[12]}}

@@ -1,20 +1,17 @@
 musicApp.controller('audioPlayController', function($scope, allNotes) {
-      
-
-
+ 
+    //set of letters to be set on board
+    $scope.keyHint = ['1','2','3','4','Q','W','E','R','A','S','D','F','Z','X','C','V']
+    $scope.keyHints = function(){
+        if ($scope.keyHint[0] === '1'){
+            $scope.keyHint = ['','','','','','','','','','','','','','','','']
+        }
+        else {
+            $scope.keyHint = ['1','2','3','4','Q','W','E','R','A','S','D','F','Z','X','C','V']
+        }
+    };
     
-  $scope.keyHint = ['1','2','3','4','Q','W','E','R','A','S','D','F','Z','X','C','V']
-  
-  $scope.keyHints = function(){
-      if ($scope.keyHint[0] === '1'){
-        $scope.keyHint = ['','','','','','','','','','','','','','','','']
-      }
-      else {
-          $scope.keyHint = ['1','2','3','4','Q','W','E','R','A','S','D','F','Z','X','C','V']
-      }
-          
-  };
-    
+    //calls all the play functions in note class
     $scope.padplay = function(pad){
         if (event.shiftKey){
             allNotes[pad].loop();
@@ -28,10 +25,11 @@ musicApp.controller('audioPlayController', function($scope, allNotes) {
   
 });
 
+//seperate controller for keyboard input
 musicApp.controller('keyboardController', function($scope, allNotes) {
     
     window.addEventListener('keydown', function(event) {
-  switch (event.keyCode) {
+    switch (event.keyCode) {
     case 49: // 1
         if (event.shiftKey){
             allNotes.pad13.loop();
