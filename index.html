@@ -1,0 +1,119 @@
+<!--
+Code by: Spencer Fricke - UW-Madison 
+
+Things to do:
+-->
+
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Music is MEAN</title>
+
+    
+    <link href="css/style.css" rel="stylesheet">
+
+    <!--Angular-->
+    <script src="lib/angular.js"></script> 
+    <script src="lib/angular-route.js" type="text/javascript"></script>
+      
+
+    <!-- your app's js -->
+    <script src="js/app.js" type="text/javascript"></script>
+    <script src="js/controllers.js" type="text/javascript"></script>
+    <script src="js/note.js" type="text/javascript"></script>
+          
+    <!--Google Material Design-->
+    <link rel="stylesheet" href="./mdl/material.min.css">
+    <script src="./mdl/material.min.js"></script>
+    <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+
+      
+      
+
+   
+  </head>
+  <body ng-app='musicApp'>
+    <div ng-controller="audioPlayController as audio">
+        <img id="pad" src="img/pad.jpg"/>
+       <div class="row1">
+          <div id="pad1" ng-click="padplay('pad1')">
+              <br><br>
+              {{keyHint[12]}}
+          </div>
+           <div id="pad2" ng-click="padplay('pad2')">
+               <br><br>
+              {{keyHint[13]}}
+          </div>
+           <div id="pad3" ng-click="padplay('pad3')">
+               <br><br>
+              {{keyHint[14]}}
+          </div>
+           <div id="pad4" ng-click="padplay('pad4')">
+               <br><br>
+              {{keyHint[15]}}
+          </div>
+        </div>
+          <div class="row2">
+          <div id="pad5" ng-click="padplay('pad5')">
+              <br><br>
+              {{keyHint[8]}}
+          </div>
+           <div id="pad6" ng-click="padplay('pad6')">
+               <br><br>
+              {{keyHint[9]}}
+          </div>
+           <div id="pad7" ng-click="padplay('pad7')">
+               <br><br>
+              {{keyHint[10]}}
+          </div>
+           <div id="pad8" ng-click="padplay('pad8')">
+               <br><br>
+              {{keyHint[11]}}
+          </div>
+        </div>
+          <div class="row3">
+          <div id="pad9" ng-click="padplay('pad9')">
+              <br><br>
+              {{keyHint[4]}}
+          </div>
+           <div id="pad10" ng-click="padplay('pad10')">
+               <br><br>
+              {{keyHint[5]}}
+          </div>
+           <div id="pad11" ng-click="padplay('pad11')">
+               <br><br>
+              {{keyHint[6]}}
+          </div>
+           <div id="pad12" ng-click="padplay('pad12')">
+               <br><br>
+              {{keyHint[7]}}
+          </div>
+        </div>
+          <div class="row4">
+          <div id="pad13" ng-click="padplay('pad13')">
+              <br><br>
+              {{keyHint[0]}}
+          </div>
+           <div id="pad14" ng-click="padplay('pad14')">
+               <br><br>
+               {{keyHint[1]}}
+          </div>
+           <div id="pad15" ng-click="padplay('pad15')">
+               <br><br>
+               {{keyHint[2]}}
+          </div>
+           <div id="pad16" ng-click="padplay('pad16')">
+               <br><br>
+               {{keyHint[3]}}
+          </div>
+        </div>
+        <div id="keyHint" ng-click="keyHints()">  
+        </div>
+    </div>
+      <div ng-controller="keyboardController"></div>
+  </body>
+</html>

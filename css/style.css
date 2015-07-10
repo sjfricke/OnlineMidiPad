@@ -1,0 +1,164 @@
+body{
+background-color: black;
+}
+
+#pad{
+    position: absolute;     font-size: 36px;     text-align: center;
+width: 800px;
+right: 0;
+}
+
+.row1, .row2, .row3, .row4{
+/*background-color: black;*/
+}
+
+#pad16{
+    position: absolute;     font-size: 36px;     text-align: center;
+    font-size: 36px;
+    text-align: center;
+    background-color: inherit;
+    width: 107px;
+    height: 108px;
+    right: 253px;
+    top: 54px;
+}
+#pad15{
+    position: absolute;     font-size: 36px;     text-align: center;
+    background-color: inherit;
+    width: 107px;
+    height: 108px;
+    right: 386px;
+    top: 54px;
+}
+#pad14{
+    position: absolute;     font-size: 36px;     text-align: center;
+    background-color: inherit;
+    width: 107px;
+    height: 108px;
+    right: 519px;
+    top: 54px;
+}
+#pad13{
+    position: absolute;     font-size: 36px;     text-align: center;
+    background-color: inherit;
+    width: 107px;
+    height: 108px;
+    right: 652px;
+    top: 52px;
+}
+#pad12{
+    position: absolute;     font-size: 36px;     text-align: center;
+    background-color: inherit;
+    width: 107px;
+    height: 108px;
+    right: 254px;
+    top: 187px;
+}
+#pad11{
+    position: absolute;     font-size: 36px;     text-align: center;
+    background-color: inherit;
+    width: 107px;
+    height: 108px;
+    right: 386px;
+    top: 187px;
+}
+#pad10{
+    position: absolute;     font-size: 36px;     text-align: center;
+    background-color: inherit;
+    width: 107px;
+    height: 108px;
+    right: 519px;
+    top: 187px;
+}
+#pad9{
+    position: absolute;     font-size: 36px;     text-align: center;
+    background-color: inherit;
+    width: 107px;
+    height: 108px;
+    right: 651px;
+    top: 187px;
+}
+#pad8{
+    position: absolute;     font-size: 36px;     text-align: center;
+    background-color: inherit;
+    width: 107px;
+    height: 108px;
+    right: 254px;
+    top: 320px;
+}
+#pad7{
+    position: absolute;     font-size: 36px;     text-align: center;
+    background-color: inherit;
+    width: 107px;
+    height: 108px;
+    right: 386px;
+    top: 320px;
+}
+#pad6{
+    position: absolute;     font-size: 36px;     text-align: center;
+    background-color: inherit;
+    width: 107px;
+    height: 108px;
+    right: 519px;
+    top: 320px;
+}
+#pad5{
+    position: absolute;     font-size: 36px;     text-align: center;
+    background-color: inherit;
+    width: 107px;
+    height: 108px;
+    right: 651px;
+    top: 320px;
+}
+#pad4{
+    position: absolute;     font-size: 36px;     text-align: center;
+    background-color: inherit;
+    width: 107px;
+    height: 108px;
+    right: 254px;
+    top: 450px;
+}
+#pad3{
+    position: absolute;     font-size: 36px;     text-align: center;
+    background-color: inherit;
+    width: 107px;
+    height: 108px;
+    right: 386px;
+    top: 450px;
+}
+#pad2{
+    position: absolute;     font-size: 36px;     text-align: center;
+    background-color: inherit;
+    width: 107px;
+    height: 108px;
+    right: 519px;
+    top: 450px;
+}
+#pad1{
+    position: absolute;     font-size: 36px;     text-align: center;
+    background-color: inherit;
+    width: 107px;
+    height: 108px;
+    right: 651px;
+    top: 450px;
+}
+#pad16:hover, #pad15:hover, #pad14:hover, #pad13:hover, #pad12:hover, #pad11:hover, #pad10:hover, #pad9:hover, #pad8:hover, #pad7:hover, #pad6:hover, #pad5:hover, #pad4:hover, #pad3:hover, #pad2:hover, #pad1:hover{
+    background-color: dodgerblue;
+    cursor: pointer;
+}
+
+/*#pad16:active, #pad15:active, #pad14:active, #pad13:active, #pad12:active, #pad11:active, #pad10:active, #pad9:active, #pad8:active, #pad7:active, #pad6:active, #pad5:active, #pad4:active, #pad3:active, #pad2:active, #pad1:active{
+    background-color: #1873cc;
+}*/
+
+#keyHint{
+    position: absolute;     font-size: 36px;     text-align: center;
+    width: 37px;
+    height: 14px;
+    right: 112px;
+    top: 147px;
+}
+#keyHint:hover{background-color: dodgerblue;
+    cursor: pointer;}
+#keyHint:active{background-color: #1873cc;}
+
