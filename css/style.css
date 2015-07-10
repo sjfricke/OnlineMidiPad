@@ -2,6 +2,12 @@ body{
 background-color: black;
 }
 
+#info{
+width: 450px;
+color: white;
+float: left;
+}
+
 #pad{
     position: absolute;     font-size: 36px;     text-align: center;
 width: 800px;
@@ -161,4 +167,6 @@ right: 0;
 #keyHint:hover{background-color: dodgerblue;
     cursor: pointer;}
 #keyHint:active{background-color: #1873cc;}
+
+
 
