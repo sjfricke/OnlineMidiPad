@@ -12,12 +12,13 @@ musicApp.factory('Note', function(){
         this.song = new Audio(this.music);
     };
     
-   
+   //setting music in edit mode
    Note.prototype.setMusic = function(url){
         this.music = './MusicSections/' + url + '.mp3';
         this.song = new Audio(this.music);
     };
     
+    //to grab part of URL to show what song is on pad
     Note.prototype.getMusic = function(){
         //substring of the url that is the song name
         return this.music.substring(16, this.music.length - 4);
@@ -31,6 +32,7 @@ musicApp.factory('Note', function(){
     Note.prototype.stop = function(){
         restart(this.song, this.pad);
     };
+   
     //takes in pad to update CSS
     var restart = function(song, pad){
         song.pause();
@@ -40,6 +42,7 @@ musicApp.factory('Note', function(){
     
     //plays from within object itelf
     var play = function(song, pad, loop, spam){
+        //if song is at beginning, end, or spam mode
         if (song.currentTime === 0 || song.currentTime === song.duration || spam){
             if(!loop){
                 //takes in loop as true if shift is clicked
@@ -51,6 +54,7 @@ musicApp.factory('Note', function(){
             }
             document.getElementById(pad).style.backgroundColor = colorSelection;
         }
+        //someone clicked to stop track
         else {
             song.loop = false;
             restart(song, pad);
