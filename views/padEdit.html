@@ -1,0 +1,71 @@
+<div ng-controller="editController as audio">
+    <div id="songSelection" ng-show="padPicked">
+        <button id="exitEditing" ng-click="exitEdit()">Cancel</button>
+        <text id="editInfo">Current Music <b>'{{currentSong(padSelect)}}'</b> for <b>'{{padSelect}}'</b></text>
+        <ul id="selectionUL" ng-repeat="(key, value) in songList">
+            <li id="selectionLI" class="hovering" ng-click="songPick(value)">{{key}}</li>
+        </ul>
+    </div>
+    
+    <img id="pad" src="img/pad.jpg"/>
+    <div id="editNotice">
+        YOU ARE NOW IN EDITING MODE - Click Pad to Edit
+    </div>
+        <div class="row1">
+          <div id="pad1" ng-click="padpick('pad1')">
+          </div>
+           <div id="pad2" ng-click="padpick('pad2')">
+
+          </div>
+           <div id="pad3" ng-click="padpick('pad3')">
+
+          </div>
+           <div id="pad4" ng-click="padpick('pad4')">
+
+          </div>
+        </div>
+          <div class="row2">
+          <div id="pad5" ng-click="padpick('pad5')">
+              
+          </div>
+           <div id="pad6" ng-click="padpick('pad6')">
+                        
+            </div>
+           <div id="pad7" ng-click="padpick('pad7')">
+               
+          </div>
+           <div id="pad8" ng-click="padpick('pad8')">
+               
+          </div>
+        </div>
+          <div class="row3">
+          <div id="pad9" ng-click="padpick('pad9')">
+              
+          </div>
+           <div id="pad10" ng-click="padpick('pad10')">
+               
+          </div>
+           <div id="pad11" ng-click="padpick('pad11')">
+               
+          </div>
+           <div id="pad12" ng-click="padpick('pad12')">
+               
+          </div>
+        </div>
+          <div class="row4">
+          <div id="pad13" ng-click="padpick('pad13')">
+              
+          </div>
+           <div id="pad14" ng-click="padpick('pad14')">
+               
+          </div>
+           <div id="pad15" ng-click="padpick('pad15')">
+               
+          </div>
+           <div id="pad16" ng-click="padpick('pad16')">
+               
+          </div>
+        </div>
+        
+ 
+</div>

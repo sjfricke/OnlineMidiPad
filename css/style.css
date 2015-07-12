@@ -1,5 +1,6 @@
 body{
 background-color: black;
+line-height: 1;
 }
 
 #info{
@@ -15,6 +16,7 @@ background-color: black;
     text-align: center;
     width: 800px;
     right: 0;
+
 }
 
 .row1, .row2, .row3, .row4{
@@ -151,8 +153,13 @@ background-color: black;
     right: 651px;
     top: 450px;
 }
-#pad16:hover, #pad15:hover, #pad14:hover, #pad13:hover, #pad12:hover, #pad11:hover, #pad10:hover, #pad9:hover, #pad8:hover, #pad7:hover, #pad6:hover, #pad5:hover, #pad4:hover, #pad3:hover, #pad2:hover, #pad1:hover, #keyHint:hover, #colorChange:hover{
+#pad16:hover, #pad15:hover, #pad14:hover, #pad13:hover, #pad12:hover, #pad11:hover, #pad10:hover, #pad9:hover, #pad8:hover, #pad7:hover, #pad6:hover, #pad5:hover, #pad4:hover, #pad3:hover, #pad2:hover, #pad1:hover, #keyHint:hover, #colorChange:hover, #editPad:hover{
     background-color: aliceblue;
+    cursor: pointer;
+}
+
+.hovering:hover{
+    background-color: white;
     cursor: pointer;
 }
 
@@ -173,7 +180,63 @@ background-color: black;
     z-index: 3;
 }
 
-#keyHint:active, #colorChange:active{background-color:floralwhite;}
+#editPad{
+    position: absolute;
+    width: 37px;
+    height: 14px;
+    right: 34px;
+    top: 83px;
+    z-index: 3;
+}
+
+#editNotice{
+    position: absolute;
+    right: 200px;
+    font-size: 140%;
+    bottom: 40px;
+    color: white;
+    z-index: 4;
+}
+
+#songSelection{
+    position: absolute;
+    height: 500px;
+    top: 10%;
+    margin-left: 10%;
+    width: 80%; 
+    border: 5px solid white;
+    background-color: aliceblue;
+    z-index: 1;
+}
+
+#exitEditing{
+    height: 30px;
+    width: 70px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    
+}
+
+#selectionUL{
+    width: 100px;
+    margin-right: 10px;
+    font-size: 80%;
+    display: inline-block;
+    border: 1px solid black;
+    list-style-type: none;
+    text-align: center;
+    padding-left: 0;
+   
+}
+
+#editInfo{   
+    position: absolute;
+    bottom: 0px;
+    left: 0px;    
+}
+
+#keyHint:active, #colorChange:active, #editPad:active, .hovering:active{background-color:floralwhite;}
 
 
 /*----------------------------------noUISlider--------------------------------------*/
@@ -227,3 +290,4 @@ background-color: black;
     z-index: 5;
     top: 290px;
 }
+

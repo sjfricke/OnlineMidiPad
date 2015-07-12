@@ -14,7 +14,13 @@ musicApp.factory('Note', function(){
     
    
    Note.prototype.setMusic = function(url){
-        this.music = url;
+        this.music = './MusicSections/' + url + '.mp3';
+        this.song = new Audio(this.music);
+    };
+    
+    Note.prototype.getMusic = function(){
+        //substring of the url that is the song name
+        return this.music.substring(16, this.music.length - 4);
     };
     
     //play from controller
@@ -22,6 +28,9 @@ musicApp.factory('Note', function(){
         play(this.song, this.pad, false, false);
     };
     
+    Note.prototype.stop = function(){
+        restart(this.song, this.pad);
+    };
     //takes in pad to update CSS
     var restart = function(song, pad){
         song.pause();
