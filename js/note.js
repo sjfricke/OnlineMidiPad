@@ -29,6 +29,7 @@ musicApp.factory('Note', function(){
         play(this.song, this.pad, false, false);
     };
     
+    //restarts song when called to stop
     Note.prototype.stop = function(){
         restart(this.song, this.pad);
     };
@@ -62,6 +63,7 @@ musicApp.factory('Note', function(){
         }
     }
     
+    //calls for toggling loop attribute
     Note.prototype.loop = function(){
         
         if(this.song.loop === false){
@@ -77,11 +79,14 @@ musicApp.factory('Note', function(){
     
     };
     
+    //reloads songs and allows for constant restarting of track
     Note.prototype.spam = function(){
         this.song.load();
         play(this.song, this.pad, false, true);
     };
     
+    //sets volume
+    //HTML audio 0 to 1 is 0% to 100%
     Note.prototype.setVolume = function(vol){
     this.song.volume = vol;
     };

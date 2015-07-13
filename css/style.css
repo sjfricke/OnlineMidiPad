@@ -1,3 +1,6 @@
+/* ------------------------------------------------------------------------------------------------------ 
+                                                Main Screen
+------------------------------------------------------------------------------------------------------ */
 body{
 background-color: black;
 line-height: 1;
@@ -153,14 +156,19 @@ line-height: 1;
     right: 651px;
     top: 450px;
 }
-#pad16:hover, #pad15:hover, #pad14:hover, #pad13:hover, #pad12:hover, #pad11:hover, #pad10:hover, #pad9:hover, #pad8:hover, #pad7:hover, #pad6:hover, #pad5:hover, #pad4:hover, #pad3:hover, #pad2:hover, #pad1:hover, #keyHint:hover, #colorChange:hover, #editPad:hover{
+#pad16:hover, #pad15:hover, #pad14:hover, #pad13:hover, #pad12:hover, #pad11:hover, #pad10:hover, #pad9:hover, #pad8:hover, #pad7:hover, #pad6:hover, #pad5:hover, #pad4:hover, #pad3:hover, #pad2:hover, #pad1:hover{
     background-color: aliceblue;
     cursor: pointer;
 }
 
+
 .hovering:hover{
     background-color: white;
     cursor: pointer;
+}
+
+.active:active{
+    background-color:floralwhite;
 }
 
 #keyHint{
@@ -188,6 +196,10 @@ line-height: 1;
     top: 83px;
     z-index: 3;
 }
+
+/* ------------------------------------------------------------------------------------------------------ 
+                                                Edit Screen
+------------------------------------------------------------------------------------------------------ */
 
 #editNotice{
     position: absolute;
@@ -236,10 +248,12 @@ line-height: 1;
     left: 0px;    
 }
 
-#keyHint:active, #colorChange:active, #editPad:active, .hovering:active{background-color:floralwhite;}
 
 
-/*----------------------------------noUISlider--------------------------------------*/
+
+/* ------------------------------------------------------------------------------------------------------ 
+                                                noUISlider
+------------------------------------------------------------------------------------------------------ */
 
 #red, #green, #blue {
 	margin: 10px;

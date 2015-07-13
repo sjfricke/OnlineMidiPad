@@ -1,6 +1,7 @@
  
    
-
+//function for setting colors from slides to document
+//need to refactor to different file
 function setColor(){
 
     var resultElement = document.getElementById('result'),

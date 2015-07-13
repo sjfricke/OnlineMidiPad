@@ -3,7 +3,7 @@
         <button id="exitEditing" ng-click="exitEdit()">Cancel</button>
         <text id="editInfo">Current Music <b>'{{currentSong(padSelect)}}'</b> for <b>'{{padSelect}}'</b></text>
         <ul id="selectionUL" ng-repeat="(key, value) in songList">
-            <li id="selectionLI" class="hovering" ng-click="songPick(value)">{{key}}</li>
+            <li id="selectionLI" class="hovering active" ng-click="songPick(value)">{{key}}</li>
         </ul>
     </div>
     

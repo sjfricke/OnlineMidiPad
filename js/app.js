@@ -2,34 +2,35 @@ var musicApp = angular.module('musicApp' , ['ngRoute']);
 
 musicApp.run(function($rootScope){
     
+    //set rootScope variable for editing toggle
     $rootScope.editing = false;
     
+    //Color Change Sliders declared and created
     var resultElement = document.getElementById('result'),
 	sliders = document.getElementsByClassName('sliders');
+    for ( var i = 0; i < sliders.length; i++ ) {
 
-for ( var i = 0; i < sliders.length; i++ ) {
+        noUiSlider.create(sliders[i], {
+            start: 127,
+            connect: "lower",
+            orientation: "vertical",
+            range: {
+                'min': 0,
+                'max': 255
+            },
+            format: wNumb({
+                decimals: 0
+            })
+        });
 
-	noUiSlider.create(sliders[i], {
-		start: 127,
-		connect: "lower",
-		orientation: "vertical",
-		range: {
-			'min': 0,
-			'max': 255
-		},
-		format: wNumb({
-			decimals: 0
-		})
-	});
+        // Bind the color changing function
+        // to the slide event.
+        sliders[i].noUiSlider.on('slide', setColor);
+    }
 
-	// Bind the color changing function
-	// to the slide event.
-	sliders[i].noUiSlider.on('slide', setColor);
-}
-    
+    //Master Volume sliders declared and created
     var slider = document.getElementById('volume');
-    
-   noUiSlider.create(slider, {
+    noUiSlider.create(slider, {
 	start: .2,
     connect: "lower",
     orientation: "vertical",
@@ -48,6 +49,7 @@ musicApp.service('allNotes', function (Note) {
 
 
     // create notes
+    //Current defaults hardcoded here until server side is made
     var pad1 = new Note('pad1', 'z', './MusicSections/Beat 1.mp3');
     var pad2 = new Note('pad2', 'x', './MusicSections/Beat 2.mp3');
     var pad3 = new Note('pad3', 'c', './MusicSections/Kick Drum.mp3');
@@ -88,6 +90,7 @@ musicApp.service('allNotes', function (Note) {
 });
 
 musicApp.directive('padEdit', function() {
+    //displays pad editing view
   return {
     restrict: 'E',
     templateUrl: 'views/padEdit.html'

@@ -1,7 +1,7 @@
 <!--
 Code by: Spencer Fricke - UW-Madison 
 
-Things to do:
+Design and support by: Brady Boettcher
 -->
 
 
@@ -41,7 +41,8 @@ Things to do:
 
   </head>
   <body ng-app='musicApp'>
-    <div ng-controller="infoController">
+    <div ng-controller="infoController"> 
+    <!--Takes all info logic-->    
         <div id="info">
             <br>
             <b>Online Launch Pad by Spencer Fricke </b>
@@ -57,7 +58,9 @@ Things to do:
             Adjust volume slider for full ear blasting controller
             <br><br>
             Edit the pads from their defaults with the 'Edit Pad' button
-            <div id="colorpicker" ng-show="newColor">
+            
+            <!--color picker display and slider-->
+            <div id="colorpicker" ng-show="newColor" ng-cloak>
                 <div class="sliders" id="red"></div>
                 <div class="sliders" id="green"></div>
                 <div class="sliders" id="blue"></div>
@@ -66,15 +69,20 @@ Things to do:
             </div>
 
         </div>
-        <div id="colorChange" ng-click="colorSwitch()">  
-        </div>
-        <div id="editPad" ng-click="editPad()">  
-        </div>
+        <!--Div button for color change screens-->
+        <div id="colorChange" class="hovering active" ng-click="colorSwitch()"> </div>
+        <!--Div button for editing pad section-->
+        <div id="editPad" class="hovering active" ng-click="editPad()"> </div>
     </div>
  
-    <div ng-controller="audioPlayController as audio" ng-hide="editing">
+    <div ng-controller="audioPlayController as audio" ng-hide="editing" ng-cloak>
+        <!--Deals with all audio logic-->
+        <!--Volume slider-->
         <div class="volume" id="volume"></div>
+        <!--Image of midi pad-->
         <img id="pad" src="img/pad.jpg"/>
+        
+        <!--Divs of all 16 pads with letters wrapped in view and function to play-->
         <div class="row1">
           <div id="pad1" ng-click="padplay('pad1')">
               <br>
@@ -147,16 +155,18 @@ Things to do:
                {{keyHint[3]}}
           </div>
         </div>
-        <div id="keyHint" ng-click="keyHints()">  
+        <div id="keyHint" class="hovering active" ng-click="keyHints()">  
         </div>
         
         
     </div>
+      <!--hold editing directive-->
     <div id="editing" ng-show="editing">
         <!--put after audioController to prevent pad ID being used for CSS:active and hover-->
         <pad-Edit></pad-Edit>  
     </div>   
-      <div ng-controller="keyboardController"></div>
+      
+      <div ng-controller="keyboardController"><!--holds keyboard logic--></div>
       
       
       
