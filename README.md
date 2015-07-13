@@ -17,4 +17,3 @@ A Midi pad to play with on your browser
 *Better and complete quantizing of tracks
 *Recording track to save and share
 *Overall better looking display
-
