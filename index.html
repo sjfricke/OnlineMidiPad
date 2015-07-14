@@ -16,6 +16,7 @@ Design and support by: Brady Boettcher
        <!-- Angular Material CSS now available via Google CDN; version 0.10 used here -->
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.10.0/angular-material.min.css">
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/pads.css" rel="stylesheet">
 
     <!--Angular-->
     <script src="lib/angular.js"></script>
@@ -30,7 +31,7 @@ Design and support by: Brady Boettcher
     <script src="js/app.js" type="text/javascript"></script>
     <script src="js/controllers.js" type="text/javascript"></script>
     <script src="js/note.js" type="text/javascript"></script>
-    <script src="js/color.js" type="text/javascript"></script>
+    <script src="js//allNotes.js" type="text/javascript"></script>
     <script src="js/wNumb.js" type="text/javascript"></script>
 
 
@@ -59,18 +60,8 @@ Design and support by: Brady Boettcher
             <br><br>
             Edit the pads from their defaults with the 'Edit Pad' button   -->
 
-            <!--color picker display and slider-->
-            <div id="colorpicker" ng-show="newColor" ng-cloak>
-                <div class="sliders" id="red"></div>
-                <div class="sliders" id="green"></div>
-                <div class="sliders" id="blue"></div>
 
-                <div id="result" class="result"></div>
-            </div>
-
-        </div>
-        <!--Div button for color change screens-->
-        <div id="colorChange" class="hovering active" ng-click="colorSwitch()"> </div>
+        </div>    
         <!--Div button for editing pad section-->
         <div id="editPad" class="hovering active" ng-click="editPad()"> </div>
     </div>
@@ -82,92 +73,7 @@ Design and support by: Brady Boettcher
         <!--Image of midi pad-->
         <img id="pad" src="img/keyboard.jpg"/>
 
-        <!--Divs of all 16 pads with letters wrapped in view and function to play-->
-        <div class="row1">
-          <div id="pad1" ng-click="padplay('pad1')">
-              <br>
-
-          </div>
-           <div id="pad2" ng-click="padplay('pad2')">
-               <br>
-
-          </div>
-           <div id="pad3" ng-click="padplay('pad3')">
-               <br>
-
-          </div>
-           <div id="pad4" ng-click="padplay('pad4')">
-               <br>
-
-          </div>
-        </div>
-          <div class="row2">
-          <div id="pad5" ng-click="padplay('pad5')">
-              <br>
-
-          </div>
-           <div id="pad6" ng-click="padplay('pad6')">
-               <br>
-
-          </div>
-           <div id="pad7" ng-click="padplay('pad7')">
-               <br>
-
-          </div>
-           <div id="pad8" ng-click="padplay('pad8')">
-               <br>
-
-          </div>
-        </div>
-          <div class="row3">
-          <div id="pad9" ng-click="padplay('pad9')">
-              <br>
-
-          </div>
-           <div id="pad10" ng-click="padplay('pad10')">
-               <br>
-
-          </div>
-           <div id="pad11" ng-click="padplay('pad11')">
-               <br>
-
-          </div>
-           <div id="pad12" ng-click="padplay('pad12')">
-               <br>
-
-          </div>
-        </div>
-          <div class="row4">
-          <div id="pad13" ng-click="padplay('pad13')">
-              <br>
-
-          </div>
-           <div id="pad14" ng-click="padplay('pad14')">
-               <br>
-
-          </div>
-           <div id="pad15" ng-click="padplay('pad15')">
-               <br>
-
-          </div>
-           <div id="pad16" ng-click="padplay('pad16')">
-               <br>
-
-          </div>
-          <div id="pad17" ng-click="padplay('pad17')">
-              <br>
-
-         </div>
-         <div id="pad18" ng-click="padplay('pad18')">
-             <br>
-
-        </div>
-        <div id="pad19" ng-click="padplay('pad19')">
-            <br>
-
-       </div>
-
-        </div>
+        <pad-layout></pad-layout>
 
     </div>
       <!--hold editing directive-->

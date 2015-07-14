@@ -1,0 +1,195 @@
+.row1, .row2, .row3, .row4{
+/*background-color: black;*/
+}
+
+/* border-raduis = .5em gives best curve around corners to match keyboard buttons */
+#pad1{
+    position: absolute;     
+    background-color: inherit;
+    border-radius: .5em;
+    width: 4.9em;
+    height: 4.65em;
+    left: 7.21em;
+    top: 10.2em;
+}
+#pad2{
+}
+#pad3{
+    position: absolute;
+    background-color: inherit;
+    border-radius: .2em;
+    width: 2.16em;
+    height: 2.15em;
+    left: 8.3em;
+    top: 4.48em;
+}
+#pad4{
+    position: absolute;
+    background-color: inherit;
+    border-radius: .2em;
+    width: 2.16em;
+    height: 2.15em;
+    left: 5.76em;
+    top: 4.48em;
+}
+#pad5{
+}
+#pad6{
+}
+#pad7{
+}
+#pad8{
+}
+#pad9{
+}
+#pad0{
+}
+#padDash{
+}
+#padEquals{
+}
+#padQ{
+    position: absolute;     
+    background-color: inherit;
+    border-radius: .5em;
+    width: 4.9em;
+    height: 4.65em;
+    left: 10.04em;
+    top: 15.8em;
+}
+#padW{
+    position: absolute;     
+    background-color: inherit;
+    border-radius: .2em;
+    width: 2.16em;
+    height: 2.15em;
+    left: 7.02em;
+    top: 6.98em;
+}
+#padE{
+    position: absolute;       
+    background-color: inherit;
+    border-radius: .2em;
+    width: 2.16em;
+    height: 2.15em;
+    left: 9.58em;
+    top: 6.98em;
+}
+#padR{
+    position: absolute;     
+    background-color: inherit;
+    border-radius: .2em;
+    width: 2.16em;
+    height: 2.15em;
+    left: 12.13em;
+    top: 6.98em;
+}
+#padT{
+}
+#padY{
+}
+#padU{
+}
+#padI{
+}
+#padO{
+}
+#padP{
+}
+#padA{
+    position: absolute;          
+    background-color: inherit;
+    border-radius: .2em;
+    width: 2.16em;
+    height: 2.15em;
+    left: 5.12em;
+    top: 9.47em;
+}
+#padS{
+    position: absolute;     
+    background-color: inherit;
+    border-radius: .2em;
+    width: 2.16em;
+    height: 2.15em;
+    left: 7.67em;
+    top: 9.47em;
+}
+#padD{
+    position: absolute;     
+    background-color: inherit;
+    border-radius: .2em;
+    width: 2.16em;
+    height: 2.15em;
+    left: 10.22em;
+    top: 9.47em;
+}
+#padF{
+    position: absolute;     
+    background-color: inherit;
+    border-radius: .2em;
+    width: 2.16em;
+    height: 2.15em;
+    left: 12.77em;
+    top: 9.47em;
+}
+#padG{
+}
+#padH{
+}
+#padJ{
+}
+#padK{
+}
+#padL{
+}
+#padZ{
+}
+#padX{
+    position: absolute;          
+    background-color: inherit;
+    border-radius: .2em;
+    width: 2.16em;
+    height: 2.15em;
+    left: 8.95em;
+    top: 11.97em;
+}
+#padC{
+    position: absolute;          
+    background-color: inherit;
+    border-radius: .2em;
+    width: 2.16em;
+    height: 2.15em;
+    left: 11.5em;
+    top: 11.97em;
+}
+#padV{
+    position: absolute;          
+    background-color: inherit;
+    border-radius: .2em;
+    width: 2.16em;
+    height: 2.15em;
+    left: 14.06em;
+    top: 11.97em;
+}
+#padB{
+}
+#padN{
+}
+#padM{
+    position: absolute;              
+    background-color: inherit;
+    border-radius: .2em;
+    width: 2.16em;
+    height: 2.15em;
+    left: 6.39em;
+    top: 11.95em;
+}
+
+
+
+
+
+#pad1:hover, #pad2:hover, #pad3:hover, #pad4:hover, #pad5:hover, #pad6:hover, #pad7:hover, #pad8:hover, #pad9:hover, #pad0:hover, #padDash:hover, #padEquals:hover, #padQ:hover, #padW:hover, #padE:hover, #padR:hover, #padT:hover, #padY:hover, #padU:hover, #padI:hover, #padO:hover, #padP:hover, #padA:hover, #padS:hover, #padD:hover, #padF:hover, #padG:hover, #padH:hover, #padJ:hover, #padK:hover, #padL:hover, #padZ:hover, #padX:hover, #padC:hover, #padV:hover, #padN:hover, #padM:hover{
+    background-color: aliceblue;
+    cursor: pointer;
+}

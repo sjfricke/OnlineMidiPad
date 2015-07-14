@@ -1,13 +1,15 @@
 
+/*
 Note class
 Contains all playback and setting of each seperate note
 */
 musicApp.factory('Note', function(){
 
     //Constructer
-    var Note = function(pad, key, music){
+    var Note = function(pad, key, action, music){
         this.pad = pad;
         this.key = key;
+        this.action = action;
         this.music = music;
         this.song = new Audio(this.music);
     };

@@ -1,16 +1,5 @@
 musicApp.controller('audioPlayController', function($scope, allNotes, $rootScope) {
 
-    //set of letters to be set on board
-    $scope.keyHint = ['1','2','3','4','Q','W','E','R','A','S','D','F','Z','X','C','V']
-    //Toggle function
-    $scope.keyHints = function(){
-        if ($scope.keyHint[0] === '1'){
-            $scope.keyHint = ['','','','','','','','','','','','','','','','']
-        }
-        else {
-            $scope.keyHint = ['1','2','3','4','Q','W','E','R','A','S','D','F','Z','X','C','V']
-        }
-    };
 
     //calls all the play functions in note class
     $scope.padplay = function(pad){
@@ -39,35 +28,10 @@ musicApp.controller('audioPlayController', function($scope, allNotes, $rootScope
         }
     });
 
-    //Toggle of the letter 'J' being pressed
-    //TODO refactor out of controllers
-    window.addEventListener('keydown', function(event) {
-        if (event.keyCode == 74){
-            $scope.spam = true;
-        }
-    });
-    window.addEventListener('keyup', function(event) {
-        if (event.keyCode == 74){
-            $scope.spam = false;
-        }
-    });
 });
 
 //seperate controller for keyboard input
 musicApp.controller('keyboardController', function($scope, allNotes, $rootScope) {
-
-    //Toggle of the letter 'J' being pressed
-     //TODO refactor out of controllers
-    window.addEventListener('keydown', function(event) {
-        if (event.keyCode == 74){
-            $scope.spam = true;
-        }
-    });
-    window.addEventListener('keyup', function(event) {
-        if (event.keyCode == 74){
-            $scope.spam = false;
-        }
-    });
 
     //switch case for all possible keyboard presses
     window.addEventListener('keydown', function(event) {
