@@ -14,28 +14,26 @@ musicApp.factory('Note', function(){
         this.song = new Audio(this.music);
     };
     
-   //setting music in edit mode
-   Note.prototype.setMusic = function(url){
-        this.music = './MusicSections/' + url + '.mp3';
-        this.song = new Audio(this.music);
-    };
-
-    //to grab part of URL to show what song is on pad
-    Note.prototype.getMusic = function(){
-        //substring of the url that is the song name
-        return this.music.substring(16, this.music.length - 4);
-    };
-
-    //play from controller
+     //play from controller
     Note.prototype.play = function(){
-        play(this.song, this.pad, false, false);
+        switch(this.action){
+            case "trigger":
+                playTrigger(this.song, this.pad);
+                break;
+            case "gate":
+                playGate(this.song, this.pad, this.key);
+                break;
+            case "repeat":
+                playRepeat(this.song, this.pad);
+                break;
+            case "toggle":
+                playToggle(this.song, this.pad);
+                break;
+            default:
+                console.log("no action types were ran");
+        }
     };
-
-    //restarts song when called to stop
-    Note.prototype.stop = function(){
-        restart(this.song, this.pad);
-    };
-
+    
     //takes in pad to update CSS
     var restart = function(song, pad){
         song.pause();
@@ -43,15 +41,48 @@ musicApp.factory('Note', function(){
         document.getElementById(pad).style.backgroundColor = "";
     }
 
-    //plays from within object itelf
-    var play = function(song, pad, loop, spam){
-        //if song is at beginning, end, or spam mode
-        if (song.currentTime === 0 || song.currentTime === song.duration || spam){
-            if(!loop){
-                //takes in loop as true if shift is clicked
-                song.loop = false;
+    //playing of trigger type
+    var playTrigger = function(song, pad){
+        song.load();
+        song.play();
+        //turn off color when song ends
+        song.onended = function() {
+            document.getElementById(pad).style.backgroundColor = "";
+        }
+        document.getElementById(pad).style.backgroundColor = colorSelection;
+    }
+    
+    //playing of gate type
+    var playGate = function(song, pad, key){
+        song.play();   
+        //waits for pad's keyCode to be let off
+        window.addEventListener('keyup', function(event) {
+            if (event.keyCode == key){
+                restart(song, pad);
             }
+        });
+    }
+    
+    //playing of repeat type
+    var playRepeat = function(song, pad){
+        if (song.loop === false){
+            restart(song, pad);
+            song.loop = true;
             song.play();
+        }
+        else{
+            song.loop = false;
+            restart(song, pad);
+        }
+    }
+    
+    //playing of toggle type
+    var playToggle = function(song, pad){
+        //checks for song at start or end
+        if (song.currentTime === 0 || song.currentTime === song.duration){
+            //turn on music
+            song.play();
+            //turn off color when song ends
             song.onended = function() {
                 document.getElementById(pad).style.backgroundColor = "";
             }
@@ -59,32 +90,26 @@ musicApp.factory('Note', function(){
         }
         //someone clicked to stop track
         else {
-            song.loop = false;
             restart(song, pad);
-
         }
     }
-
-    //calls for toggling loop attribute
-    Note.prototype.loop = function(){
-
-        if(this.song.loop === false){
-            restart(this.song, this.pad);
-            this.song.loop = true;
-            play(this.song, this.pad, true, false);
-        }
-        else{
-            this.song.loop = false;
-            restart(this.song, this.pad);
-        }
-
-
+    
+   //setting music in edit mode
+   Note.prototype.setMusic = function(url){
+        this.music = './MusicSections/' + url + '.mp3';
+        this.song = new Audio(this.music);
     };
 
-    //reloads songs and allows for constant restarting of track
-    Note.prototype.spam = function(){
-        this.song.load();
-        play(this.song, this.pad, false, true);
+    //TODO
+    //to grab part of URL to show what song is on pad
+    Note.prototype.getMusic = function(){
+        //substring of the url that is the song name
+        return this.music.substring(16, this.music.length - 4);
+    };
+
+    //restarts song when called to stop
+    Note.prototype.stop = function(){
+        restart(this.song, this.pad);
     };
 
     //sets volume

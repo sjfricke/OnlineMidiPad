@@ -3,15 +3,7 @@ musicApp.controller('audioPlayController', function($scope, allNotes, $rootScope
 
     //calls all the play functions in note class
     $scope.padplay = function(pad){
-        if (event.shiftKey){
-            allNotes[pad].loop();
-        }
-        else if ($scope.spam){
-            allNotes[pad].spam();
-        }
-        else{
-            allNotes[pad].play();
-        }
+        allNotes[pad].play();
     };
 
    //Master Volume slider logic to adjust volume
@@ -40,168 +32,119 @@ musicApp.controller('keyboardController', function($scope, allNotes, $rootScope)
     }
     switch (event.keyCode) {
     case 49: // 1
-        if (event.shiftKey){
-            allNotes.pad13.loop();
-        }
-        else if ($scope.spam){
-            allNotes.pad13.spam();
-        }
-        else{
-            allNotes.pad13.play();
-        }
+        allNotes.pad1.play();
         break;
     case 50: // 2
-        if (event.shiftKey){
-            allNotes.pad14.loop();
-        }
-        else if ($scope.spam){
-            allNotes.pad14.spam();
-        }
-        else{
-            allNotes.pad14.play();
-        }
+        allNotes.pad2.play();
         break;
     case 51: // 3
-        if (event.shiftKey){
-            allNotes.pad15.loop();
-        }else if ($scope.spam){
-            allNotes.pad15.spam();
-        }
-        else{
-            allNotes.pad15.play();
-        }
+        allNotes.pad3.play();
         break;
     case 52: // 4
-        if (event.shiftKey){
-            allNotes.pad16.loop();
-        }else if ($scope.spam){
-            allNotes.pad16.spam();
-        }
-        else{
-            allNotes.pad16.play();
-        }
+        allNotes.pad4.play();
+        break;
+    case 53: // 5
+        allNotes.pad5.play();
+        break;
+    case 54: // 6
+        allNotes.pad6.play();
+        break;
+    case 55: // 7
+        allNotes.pad7.play();
+        break;
+    case 56: // 8
+        allNotes.pad8.play();   
+        break;
+    case 57: // 9
+        allNotes.pad9.play();
+        break;
+    case 48: // 0
+        allNotes.pad0.play();
+        break;
+    case 189: // -
+        allNotes.padDash.play();
+        break;
+    case 187: // =
+        allNotes.padEquals.play();
         break;
     case 81: // q
-        if (event.shiftKey){
-            allNotes.pad9.loop();
-        }else if ($scope.spam){
-            allNotes.pad9.spam();
-        }
-        else{
-            allNotes.pad9.play();
-        }
+        allNotes.padQ.play();
         break;
     case 87: // w
-        if (event.shiftKey){
-            allNotes.pad10.loop();
-        }else if ($scope.spam){
-            allNotes.pad10.spam();
-        }
-        else{
-            allNotes.pad10.play();
-        }
+        allNotes.padW.play();
         break;
     case 69: // e
-        if (event.shiftKey){
-            allNotes.pad11.loop();
-        }else if ($scope.spam){
-            allNotes.pad11.spam();
-        }
-        else{
-            allNotes.pad11.play();
-        }
+        allNotes.padE.play();
         break;
     case 82: // r
-        if (event.shiftKey){
-            allNotes.pad12.loop();
-        }else if ($scope.spam){
-            allNotes.pad12.spam();
-        }
-        else{
-            allNotes.pad12.play();
-        }
+        allNotes.padR.play();
+        break;
+    case 84: // t
+        allNotes.padT.play();
+        break;
+    case 89: // y
+        allNotes.padY.play();
+        break;
+    case 85: // u
+        allNotes.padU.play();
+        break;
+    case 73: // i
+        allNotes.padI.play();
+        break;
+    case 79: // o
+        allNotes.padO.play();
+        break;
+    case 80: // p
+        allNotes.padP.play();
         break;
     case 65: // a
-        if (event.shiftKey){
-            allNotes.pad5.loop();
-        }else if ($scope.spam){
-            allNotes.pad5.spam();
-        }
-        else{
-            allNotes.pad5.play();
-        }
+        allNotes.padA.play();
         break;
     case 83: // s
-        if (event.shiftKey){
-            allNotes.pad6.loop();
-        }else if ($scope.spam){
-            allNotes.pad6.spam();
-        }
-        else{
-            allNotes.pad6.play();
-        }
+        allNotes.padS.play();
         break;
     case 68: // d
-        if (event.shiftKey){
-            allNotes.pad7.loop();
-        }else if ($scope.spam){
-            allNotes.pad7.spam();
-        }
-        else{
-            allNotes.pad7.play();
-        }
+        allNotes.padD.play();
         break;
     case 70: // f
-        if (event.shiftKey){
-            allNotes.pad8.loop();
-        }else if ($scope.spam){
-            allNotes.pad8.spam();
-        }
-        else{
-            allNotes.pad8.play();
-        }
+        allNotes.padF.play();
+        break;
+    case 71: // g
+        allNotes.padG.play();
+        break;
+    case 72: // h
+        allNotes.padH.play();
+        break;
+    case 74: // j
+        allNotes.padJ.play();
+        break;
+    case 75: // k
+        allNotes.padK.play();
+        break;
+    case 76: // l
+        allNotes.padL.play();
         break;
     case 90: // z
-        if (event.shiftKey){
-            allNotes.pad1.loop();
-        }else if ($scope.spam){
-            allNotes.pad1.spam();
-        }
-        else{
-            allNotes.pad1.play();
-        }
+        allNotes.padZ.play();
         break;
     case 88: // x
-        if (event.shiftKey){
-            allNotes.pad2.loop();
-        }else if ($scope.spam){
-            allNotes.pad2.spam();
-        }
-        else{
-            allNotes.pad2.play();
-        }
+        allNotes.padX.play();
         break;
     case 67: // c
-        if (event.shiftKey){
-            allNotes.pad3.loop();
-        }else if ($scope.spam){
-            allNotes.pad3.spam();
-        }
-        else{
-            allNotes.pad3.play();
-        }
+        allNotes.padC.play();
         break;
     case 86: // v
-        if (event.shiftKey){
-            allNotes.pad4.loop();
-        }else if ($scope.spam){
-            allNotes.pad4.spam();
-        }
-        else{
-            allNotes.pad4.play();
-        }
+        allNotes.padV.play();
         break;
-
+    case 66: // b
+        allNotes.padB.play();
+        break;
+    case 78: // n
+        allNotes.padN.play();
+        break;
+    case 77: // m
+        allNotes.padM.play();
+        break;
   }
 }, false);
 
@@ -224,16 +167,6 @@ musicApp.controller('infoController', function($scope, allNotes, $rootScope) {
                 allNotes[pad].stop();
             }
             $rootScope.editing = true;
-        }
-    }
-
-    //toggle for color slider changing screen
-    $scope.colorSwitch = function(){
-        if(!$scope.newColor){
-            $scope.newColor = true;
-        }
-        else{
-            $scope.newColor = false;
         }
     }
 

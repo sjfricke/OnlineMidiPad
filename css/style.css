@@ -17,6 +17,7 @@ line-height: 1;
     position: absolute;
     width: 85em;
     left: .18em;
+    pointer-events: none
 }
 
 
