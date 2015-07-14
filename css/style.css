@@ -68,100 +68,124 @@ line-height: 1;
     top: 4.48em;
 }
 #pad12{
+  /*r*/
     position: absolute;     font-size: 36px;
     background-color: inherit;
-    width: 107px;
-    height: 108px;
-    right: 254px;
-    top: 187px;
+    border-radius: .2em;
+    width: 2.16em;
+    height: 2.15em;
+    left: 12.13em;
+    top: 6.98em;
 }
 #pad11{
+  /*e*/
     position: absolute;     font-size: 36px;
     background-color: inherit;
-    width: 107px;
-    height: 108px;
-    right: 386px;
-    top: 187px;
+    border-radius: .2em;
+    width: 2.16em;
+    height: 2.15em;
+    left: 9.58em;
+    top: 6.98em;
 }
 #pad10{
-    position: absolute;     font-size: 36px;     text-align: center;
+  /*w*/
+    position: absolute;     font-size: 36px;
     background-color: inherit;
-    width: 107px;
-    height: 108px;
-    right: 519px;
-    top: 187px;
+    border-radius: .2em;
+    width: 2.16em;
+    height: 2.15em;
+    left: 7.02em;
+    top: 6.98em;
 }
 #pad9{
-    position: absolute;     font-size: 36px;     text-align: center;
+  /*q*/
+    position: absolute;     font-size: 36px;
     background-color: inherit;
-    width: 107px;
-    height: 108px;
-    right: 651px;
-    top: 187px;
+    border-radius: .2em;
+    width: 2.16em;
+    height: 2.15em;
+    left: 4.47em;
+    top: 6.98em;
 }
 #pad8{
-    position: absolute;     font-size: 36px;     text-align: center;
+  /*f*/
+    position: absolute;     font-size: 36px;
     background-color: inherit;
-    width: 107px;
-    height: 108px;
-    right: 254px;
-    top: 320px;
+    border-radius: .2em;
+    width: 2.16em;
+    height: 2.15em;
+    left: 12.77em;
+    top: 9.47em;
 }
 #pad7{
-    position: absolute;     font-size: 36px;     text-align: center;
+  /*d*/
+    position: absolute;     font-size: 36px;
     background-color: inherit;
-    width: 107px;
-    height: 108px;
-    right: 386px;
-    top: 320px;
+    border-radius: .2em;
+    width: 2.16em;
+    height: 2.15em;
+    left: 10.22em;
+    top: 9.47em;
 }
 #pad6{
-    position: absolute;     font-size: 36px;     text-align: center;
+  /*s*/
+    position: absolute;     font-size: 36px;
     background-color: inherit;
-    width: 107px;
-    height: 108px;
-    right: 519px;
-    top: 320px;
+    border-radius: .2em;
+    width: 2.16em;
+    height: 2.15em;
+    left: 7.67em;
+    top: 9.47em;
 }
 #pad5{
+  /*a*/
     position: absolute;     font-size: 36px;     text-align: center;
     background-color: inherit;
-    width: 107px;
-    height: 108px;
-    right: 651px;
-    top: 320px;
+    border-radius: .2em;
+    width: 2.16em;
+    height: 2.15em;
+    left: 5.12em;
+    top: 9.47em;
 }
 #pad4{
+  /*v*/
     position: absolute;     font-size: 36px;     text-align: center;
     background-color: inherit;
-    width: 107px;
-    height: 108px;
-    right: 254px;
-    top: 450px;
+    border-radius: .2em;
+    width: 2.16em;
+    height: 2.15em;
+    left: 14.06em;
+    top: 11.97em;
 }
 #pad3{
+  /*c*/
     position: absolute;     font-size: 36px;     text-align: center;
     background-color: inherit;
-    width: 107px;
-    height: 108px;
-    right: 386px;
-    top: 450px;
+    border-radius: .2em;
+    width: 2.16em;
+    height: 2.15em;
+    left: 11.5em;
+    top: 11.97em;
 }
 #pad2{
+  /*x*/
     position: absolute;     font-size: 36px;     text-align: center;
     background-color: inherit;
-    width: 107px;
-    height: 108px;
-    right: 519px;
-    top: 450px;
+    border-radius: .2em;
+    width: 2.16em;
+    height: 2.15em;
+    left: 8.95em;
+    top: 11.97em;
 }
 #pad1{
+  /*z*/
     position: absolute;     font-size: 36px;     text-align: center;
     background-color: inherit;
-    width: 107px;
-    height: 108px;
-    right: 651px;
-    top: 450px;
+    border-radius: .2em;
+    width: 2.16em;
+    height: 2.15em;
+    left: 6.39em;
+    top: 11.95em;
 }
 #pad16:hover, #pad15:hover, #pad14:hover, #pad13:hover, #pad12:hover, #pad11:hover, #pad10:hover, #pad9:hover, #pad8:hover, #pad7:hover, #pad6:hover, #pad5:hover, #pad4:hover, #pad3:hover, #pad2:hover, #pad1:hover{
     background-color: aliceblue;
