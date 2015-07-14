@@ -1,5 +1,5 @@
 musicApp.controller('audioPlayController', function($scope, allNotes, $rootScope) {
- 
+
     //set of letters to be set on board
     $scope.keyHint = ['1','2','3','4','Q','W','E','R','A','S','D','F','Z','X','C','V']
     //Toggle function
@@ -11,7 +11,7 @@ musicApp.controller('audioPlayController', function($scope, allNotes, $rootScope
             $scope.keyHint = ['1','2','3','4','Q','W','E','R','A','S','D','F','Z','X','C','V']
         }
     };
-    
+
     //calls all the play functions in note class
     $scope.padplay = function(pad){
         if (event.shiftKey){
@@ -24,23 +24,23 @@ musicApp.controller('audioPlayController', function($scope, allNotes, $rootScope
             allNotes[pad].play();
         }
     };
-    
+
    //Master Volume slider logic to adjust volume
     var slider = document.getElementById('volume');
     $scope.volume = .8;
     //HTML audio between 0 and 1 for 0 to 100%
     slider.noUiSlider.on('slide',function(){
         var volumeSlider = document.getElementById('volume');
-    
+
         $scope.volume = 1 - volumeSlider.noUiSlider.get();
         for (i = 1; i <= 16; i++){
             var pad = 'pad' + i;
             allNotes[pad].setVolume($scope.volume);
         }
     });
-    
+
     //Toggle of the letter 'J' being pressed
-    //TODO refactor out of controllers 
+    //TODO refactor out of controllers
     window.addEventListener('keydown', function(event) {
         if (event.keyCode == 74){
             $scope.spam = true;
@@ -55,9 +55,9 @@ musicApp.controller('audioPlayController', function($scope, allNotes, $rootScope
 
 //seperate controller for keyboard input
 musicApp.controller('keyboardController', function($scope, allNotes, $rootScope) {
-    
+
     //Toggle of the letter 'J' being pressed
-     //TODO refactor out of controllers 
+     //TODO refactor out of controllers
     window.addEventListener('keydown', function(event) {
         if (event.keyCode == 74){
             $scope.spam = true;
@@ -68,7 +68,7 @@ musicApp.controller('keyboardController', function($scope, allNotes, $rootScope)
             $scope.spam = false;
         }
     });
-    
+
     //switch case for all possible keyboard presses
     window.addEventListener('keydown', function(event) {
     if ($rootScope.editing){
@@ -236,46 +236,46 @@ musicApp.controller('keyboardController', function($scope, allNotes, $rootScope)
         else{
             allNotes.pad4.play();
         }
-        break;      
+        break;
 
   }
 }, false);
-    
+
 });
 
 
 
 musicApp.controller('infoController', function($scope, allNotes, $rootScope) {
-    
+
     //toggle for edit pad mode
     $scope.editPad = function(){
         if ($scope.editing){
             $rootScope.editing = false;
         }
         else {
-            
+
             //stops all tracks before going to edit
             for (i = 1; i <= 16; i++){
                 var pad = 'pad' + i;
                 allNotes[pad].stop();
             }
-            $rootScope.editing = true;       
+            $rootScope.editing = true;
         }
     }
-  
+
     //toggle for color slider changing screen
     $scope.colorSwitch = function(){
         if(!$scope.newColor){
-            $scope.newColor = true;   
+            $scope.newColor = true;
         }
         else{
             $scope.newColor = false;
         }
     }
-  
+
 });
 
-musicApp.controller('editController', function($scope, $http, allNotes){ 
+musicApp.controller('editController', function($scope, $http, allNotes){
     //padPicked = toggle
     //padSelect = scope of the pad
     $scope.padpick = function(pad){
@@ -287,7 +287,7 @@ musicApp.controller('editController', function($scope, $http, allNotes){
         $scope.padPicked = false;
     }
     //grabs data from local directory for the time being
-    $http.get('js/songData.json').success(function(data) { 
+    $http.get('js/songData.json').success(function(data) {
         $scope.songList = data;
     });
     //calls to concat string for pathfile

@@ -50,24 +50,38 @@ musicApp.service('allNotes', function (Note) {
 
     // create notes
     //Current defaults hardcoded here until server side is made
-    var pad1 = new Note('pad1', 'z', './MusicSections/Beat 1.mp3');
-    var pad2 = new Note('pad2', 'x', './MusicSections/Beat 2.mp3');
-    var pad3 = new Note('pad3', 'c', './MusicSections/Kick Drum.mp3');
-    var pad4 = new Note('pad4', 'v', './MusicSections/Snare Drum.mp3');
-    var pad5 = new Note('pad5', 'a', './MusicSections/Boys and Girls.mp3');
-    var pad6 = new Note('pad6', 's', './MusicSections/23.mp3');
-    var pad7 = new Note('pad7', 'd', './MusicSections/Around the World.mp3');
-    var pad8 = new Note('pad8', 'f', './MusicSections/Missing You.mp3');
-    var pad9 = new Note('pad9', 'q', './MusicSections/Dare.mp3');
-    var pad10 = new Note('pad10', 'w', './MusicSections/Gangnam.mp3');
-    var pad11 = new Note('pad11', 'e', './MusicSections/Razor Sharp.mp3');
-    var pad12 = new Note('pad12', 'r', './MusicSections/Pinball.mp3');
-    var pad13 = new Note('pad13', '1', './MusicSections/Background 1.mp3');
-    var pad14 = new Note('pad14', '2', './MusicSections/Background 2.mp3');
-    var pad15 = new Note('pad15', '3', './MusicSections/Thanks for Memories.mp3');
-    var pad16 = new Note('pad16', '4', './MusicSections/Viva.mp3');
-
-
+    var pad1 = new Note('pad1', 'z', './MusicSections/popCulture/aerodynamic.mp3');
+    var pad2 = new Note('pad2', 'x', './MusicSections/popCulture/aroundTheWorld.mp3');
+    var pad3 = new Note('pad3', 'c', './MusicSections/popCulture/babyOneMoreTime.mp3');
+    var pad4 = new Note('pad4', 'v', './MusicSections/popCulture/bigChordArranged.mp3');
+    var pad5 = new Note('pad5', 'a', './MusicSections/popCulture/boysAndGirls.mp3');
+    var pad6 = new Note('pad6', 's', './MusicSections/popCulture/capsuleStrings.mp3');
+    var pad7 = new Note('pad7', 'd', './MusicSections/popCulture/crawling.mp3');
+    var pad8 = new Note('pad8', 'f', './MusicSections/popCulture/dare.mp3');
+    var pad9 = new Note('pad9', 'q', './MusicSections/popCulture/drumRiff.mp3');
+    var pad10 = new Note('pad10', 'w', './MusicSections/popCulture/heavyCross.mp3');
+    var pad11 = new Note('pad11', 'e', './MusicSections/popCulture/ho.mp3');
+    var pad12 = new Note('pad12', 'r', './MusicSections/popCulture/hungOut.mp3');
+    var pad13 = new Note('pad13', '1', './MusicSections/popCulture/iDecided.mp3');
+    var pad14 = new Note('pad14', '2', './MusicSections/popCulture/meAndYou1.mp3');
+    var pad15 = new Note('pad15', '3', './MusicSections/popCulture/meAndYou2.mp3');
+    var pad16 = new Note('pad16', '4', './MusicSections/meAndYou3.mp3');
+/*  var pad1 = new Note('pad1', '1', './MusicSections/popCulture/aerodynamic.mp3');
+  var pad2 = new Note('pad2', '2', './MusicSections/popCulture/aroundTheWorld.mp3');
+  var pad3 = new Note('pad3', '3', './MusicSections/popCulture/babyOneMoreTime.mp3');
+  var pad4 = new Note('pad4', '4', './MusicSections/popCulture/bigChordArranged.mp3');
+  var pad5 = new Note('pad5', '5', './MusicSections/popCulture/boysAndGirls.mp3');
+  var pad6 = new Note('pad6', '6', './MusicSections/popCulture/capsuleStrings.mp3');
+  var pad7 = new Note('pad7', '7', './MusicSections/popCulture/crawling.mp3');
+  var pad8 = new Note('pad8', '8', './MusicSections/popCulture/dare.mp3');
+  var pad9 = new Note('pad9', '9', './MusicSections/popCulture/drumRiff.mp3');
+  var pad10 = new Note('pad10', '0', './MusicSections/popCulture/heavyCross.mp3');
+  var pad11 = new Note('pad11', 'dash', './MusicSections/popCulture/ho.mp3');
+  var pad12 = new Note('pad12', 'equals', './MusicSections/popCulture/hungOut.mp3');
+  var pad13 = new Note('pad13', 'q', './MusicSections/popCulture/iDecided.mp3');
+  var pad14 = new Note('pad14', 'w', './MusicSections/popCulture/meAndYou1.mp3');
+  var pad15 = new Note('pad15', 'e', './MusicSections/popCulture/meAndYou2.mp3');
+  var pad16 = new Note('pad16', 'r', './MusicSections/meAndYou3.mp3');  */
      // return data object to controllers
     return {
         pad1: pad1,

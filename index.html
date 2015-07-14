@@ -152,24 +152,27 @@ Design and support by: Brady Boettcher
           </div>
            <div id="pad16" ng-click="padplay('pad16')">
                <br>
-               
-          </div>
-        </div>
-        <div id="keyHint" class="hovering active" ng-click="keyHints()">
-        </div>
 
+          </div>
+          <div id="pad17" ng-click="padplay('pad17')">
+              <br>
+
+         </div>
+         <div id="pad18" ng-click="padplay('pad18')">
+             <br>
+
+        </div>
+        <div id="pad19" ng-click="padplay('pad19')">
+            <br>
+
+       </div>
+
+        </div>
 
     </div>
       <!--hold editing directive-->
-    <div id="editing" ng-show="editing">
-        <!--put after audioController to prevent pad ID being used for CSS:active and hover-->
-        <pad-Edit></pad-Edit>
-    </div>
 
       <div ng-controller="keyboardController"><!--holds keyboard logic--></div>
-
-
-
 
 
       <!-- noUIslider -->
