@@ -2,22 +2,32 @@
                                                 Main Screen
 ------------------------------------------------------------------------------------------------------ */
 body{
-background-color: black;
 line-height: 1;
+height: 100%;
+width: 100%;
+overflow: hidden;
 }
 
 #info{
-    width: 450px;
-    color: white;
-    float: left;
-    padding-left: 10px;
+    width: 80em;
+    float: top;
+    left: 2em;
+    position: absolute;
+    z-index: 1;
+
+	width: 100%;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+	filter: alpha(opacity=50);
+	-moz-opacity:0.5;
+	-khtml-opacity: 0.5;
+	opacity: 0.99;
+  color: black;
 }
 
 #pad{
     position: absolute;
     width: 85em;
-    left: .18em;
-    pointer-events: none
+    pointer-events: none;
 }
 
 
@@ -28,23 +38,6 @@ line-height: 1;
 
 .active:active{
     background-color:floralwhite;
-}
-
-#keyHint{
-    position: absolute;
-    width: 37px;
-    height: 14px;
-    right: 112px;
-    top: 147px;
-}
-
-#colorChange{
-    position: absolute;
-    width: 37px;
-    height: 14px;
-    right: 34px;
-    top: 147px;
-    z-index: 3;
 }
 
 #editPad{

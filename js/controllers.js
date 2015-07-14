@@ -6,7 +6,7 @@ musicApp.controller('audioPlayController', function($scope, allNotes, $rootScope
         allNotes[pad].play();
     };
 
-   //Master Volume slider logic to adjust volume
+  //  Master Volume slider logic to adjust volume
     var slider = document.getElementById('volume');
     $scope.volume = .8;
     //HTML audio between 0 and 1 for 0 to 100%
@@ -53,7 +53,7 @@ musicApp.controller('keyboardController', function($scope, allNotes, $rootScope)
         allNotes.pad7.play();
         break;
     case 56: // 8
-        allNotes.pad8.play();   
+        allNotes.pad8.play();
         break;
     case 57: // 9
         allNotes.pad9.play();
@@ -61,10 +61,10 @@ musicApp.controller('keyboardController', function($scope, allNotes, $rootScope)
     case 48: // 0
         allNotes.pad0.play();
         break;
-    case 189: // -
+    case 173: // -
         allNotes.padDash.play();
         break;
-    case 187: // =
+    case 61: // =
         allNotes.padEquals.play();
         break;
     case 81: // q
