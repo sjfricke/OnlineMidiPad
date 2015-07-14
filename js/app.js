@@ -1,10 +1,10 @@
 var musicApp = angular.module('musicApp' , ['ngRoute']);
 
 musicApp.run(function($rootScope){
-    
+
     //set rootScope variable for editing toggle
     $rootScope.editing = false;
-    
+
     //Color Change Sliders declared and created
     var resultElement = document.getElementById('result'),
 	sliders = document.getElementsByClassName('sliders');
@@ -38,11 +38,11 @@ musicApp.run(function($rootScope){
 		'min': 0,
 		'max': 1
 	}
-       
+
     });
-    
-    
-    
+
+
+
 });
 
 musicApp.service('allNotes', function (Note) {
@@ -66,8 +66,8 @@ musicApp.service('allNotes', function (Note) {
     var pad14 = new Note('pad14', '2', './MusicSections/Background 2.mp3');
     var pad15 = new Note('pad15', '3', './MusicSections/Thanks for Memories.mp3');
     var pad16 = new Note('pad16', '4', './MusicSections/Viva.mp3');
-    
-   
+
+
      // return data object to controllers
     return {
         pad1: pad1,
