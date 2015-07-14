@@ -5,6 +5,21 @@ musicApp.controller('audioPlayController', function($scope, allNotes, $rootScope
     $scope.padplay = function(pad){
         allNotes[pad].play();
     };
+function killSwitch() {
+      for (i = 1; i <= 16; i++){
+          var pad = 'pad' + i;
+          allNotes[pad].stop();
+      }
+    }
+    window.addEventListener('keydown', function(event) {
+      switch (event.keyCode) {
+        case 16:
+        for (i = 0; i <= 30; i++){
+            var pad = 'pad' + i;
+            allNotes[pad].stop();
+        }
+      }
+    });
 
   //  Master Volume slider logic to adjust volume
     var slider = document.getElementById('volume');

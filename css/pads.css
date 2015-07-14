@@ -112,96 +112,180 @@
     background-color: inherit;
     border-radius: .5em;
     width: 4.9em;
-    height: 4.65em;
-    left: 10.04em;
+    height: 4.67em;
+    left: 9.87em;
     top: 15.8em;
 }
 #padW{
     position: absolute;
     background-color: inherit;
-    border-radius: .2em;
-    width: 2.16em;
-    height: 2.15em;
-    left: 7.02em;
-    top: 6.98em;
+    border-radius: .5em;
+    width: 4.9em;
+    height: 4.67em;
+    left: 15.62em;
+    top: 15.8em;
 }
 #padE{
     position: absolute;
     background-color: inherit;
-    border-radius: .2em;
-    width: 2.16em;
-    height: 2.15em;
-    left: 9.58em;
-    top: 6.98em;
+    border-radius: .5em;
+    width: 4.9em;
+    height: 4.67em;
+    left: 21.37em;
+    top: 15.8em;
 }
 #padR{
     position: absolute;
     background-color: inherit;
-    border-radius: .2em;
-    width: 2.16em;
-    height: 2.15em;
-    left: 12.13em;
-    top: 6.98em;
+    border-radius: .5em;
+    width: 4.9em;
+    height: 4.67em;
+    left: 27.12em;
+    top: 15.8em;
 }
 #padT{
+  position: absolute;
+  background-color: inherit;
+  border-radius: .5em;
+  width: 4.9em;
+  height: 4.67em;
+  left: 32.87em;
+  top: 15.8em;
 }
 #padY{
+  position: absolute;
+  background-color: inherit;
+  border-radius: .5em;
+  width: 4.9em;
+  height: 4.67em;
+  left: 38.62em;
+  top: 15.8em;
 }
 #padU{
+  position: absolute;
+  background-color: inherit;
+  border-radius: .5em;
+  width: 4.9em;
+  height: 4.67em;
+  left: 44.37em;
+  top: 15.8em;
 }
 #padI{
+  position: absolute;
+  background-color: inherit;
+  border-radius: .5em;
+  width: 4.9em;
+  height: 4.67em;
+  left: 50.12em;
+  top: 15.8em;
 }
 #padO{
+  position: absolute;
+  background-color: inherit;
+  border-radius: .5em;
+  width: 4.9em;
+  height: 4.67em;
+  left: 55.87em;
+  top: 15.8em;
 }
 #padP{
+  position: absolute;
+  background-color: inherit;
+  border-radius: .5em;
+  width: 4.9em;
+  height: 4.67em;
+  left: 61.62em;
+  top: 15.8em;
 }
 #padA{
-    position: absolute;
-    background-color: inherit;
-    border-radius: .2em;
-    width: 2.16em;
-    height: 2.15em;
-    left: 5.12em;
-    top: 9.47em;
+  position: absolute;
+  background-color: inherit;
+  border-radius: .5em;
+  width: 4.9em;
+  height: 4.67em;
+  left: 11.3em;
+  top: 21.37em;
 }
 #padS{
-    position: absolute;
-    background-color: inherit;
-    border-radius: .2em;
-    width: 2.16em;
-    height: 2.15em;
-    left: 7.67em;
-    top: 9.47em;
+  position: absolute;
+  background-color: inherit;
+  border-radius: .5em;
+  width: 4.9em;
+  height: 4.67em;
+  left: 17.05em;
+  top: 21.37em;
 }
 #padD{
-    position: absolute;
-    background-color: inherit;
-    border-radius: .2em;
-    width: 2.16em;
-    height: 2.15em;
-    left: 10.22em;
-    top: 9.47em;
+  position: absolute;
+  background-color: inherit;
+  border-radius: .5em;
+  width: 4.9em;
+  height: 4.67em;
+  left: 22.8em;
+  top: 21.37em;
 }
 #padF{
-    position: absolute;
-    background-color: inherit;
-    border-radius: .2em;
-    width: 2.16em;
-    height: 2.15em;
-    left: 12.77em;
-    top: 9.47em;
+  position: absolute;
+  background-color: inherit;
+  border-radius: .5em;
+  width: 4.9em;
+  height: 4.67em;
+  left: 28.55em;
+  top: 21.37em;
 }
 #padG{
+  position: absolute;
+  background-color: inherit;
+  border-radius: .5em;
+  width: 4.9em;
+  height: 4.67em;
+  left: 34.3em;
+  top: 21.37em;
 }
 #padH{
+  position: absolute;
+  background-color: inherit;
+  border-radius: .5em;
+  width: 4.9em;
+  height: 4.67em;
+  left: 40.05em;
+  top: 21.37em;
 }
 #padJ{
+  position: absolute;
+  background-color: inherit;
+  border-radius: .5em;
+  width: 4.9em;
+  height: 4.67em;
+  left: 45.8em;
+  top: 21.37em;
 }
 #padK{
+  position: absolute;
+  background-color: inherit;
+  border-radius: .5em;
+  width: 4.9em;
+  height: 4.67em;
+  left: 51.55em;
+  top: 21.37em;
 }
 #padL{
+  position: absolute;
+  background-color: inherit;
+  border-radius: .5em;
+  width: 4.9em;
+  height: 4.67em;
+  left: 57.3em;
+  top: 21.37em;
 }
 #padZ{
+  position: absolute;
+  background-color: inherit;
+  border-radius: .5em;
+  width: 4.9em;
+  height: 4.67em;
+  left: 63.05em;
+  top: 21.37em;
 }
 #padX{
     position: absolute;

@@ -40,6 +40,17 @@ overflow: hidden;
     background-color:floralwhite;
 }
 
+#killswitch{
+  z-index: 2;
+  position: absolute;
+  top: 27em;
+  left: 1.24em;
+  border-radius: .5em;
+  width: 12.1em;
+  height: 4.67em;
+
+}
+
 #editPad{
     position: absolute;
     width: 37px;
