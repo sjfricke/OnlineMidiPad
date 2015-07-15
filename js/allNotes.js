@@ -6,9 +6,9 @@ musicApp.service('allNotes', function (Note) {
     //new Note(pad id, keyCode, action type, song path);
 
     var pad1 = new Note('pad1', 49, 'trigger', './MusicSections/popCulture/aerodynamic.mp3');
-    var pad2 = new Note('pad2', 50, 'trigger', './MusicSections/popCulture/aroundTheWorld.mp3');
-    var pad3 = new Note('pad3', 51, 'trigger', './MusicSections/popCulture/babyOneMoreTime.mp3');
-    var pad4 = new Note('pad4', 52, 'trigger', './MusicSections/popCulture/bigChordArranged.mp3');
+    var pad2 = new Note('pad2', 50, 'gate', './MusicSections/popCulture/aroundTheWorld.mp3');
+    var pad3 = new Note('pad3', 51, 'toggle', './MusicSections/popCulture/babyOneMoreTime.mp3');
+    var pad4 = new Note('pad4', 52, 'repeat', './MusicSections/popCulture/bigChordArranged.mp3');
     var pad5 = new Note('pad5', 53, 'trigger', './MusicSections/popCulture/boysAndGirls.mp3');
     var pad6 = new Note('pad6', 54, 'trigger', './MusicSections/popCulture/capsuleStrings.mp3');
     var pad7 = new Note('pad7', 55, 'trigger', './MusicSections/popCulture/crawling.mp3');

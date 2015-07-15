@@ -49,12 +49,13 @@ musicApp.factory('Note', function(){
         song.onended = function() {
             document.getElementById(pad).style.backgroundColor = "";
         }
-        document.getElementById(pad).style.backgroundColor = colorSelection;
+        document.getElementById(pad).style.backgroundColor = "blue";
     }
     
     //playing of gate type
     var playGate = function(song, pad, key){
         song.play();   
+        document.getElementById(pad).style.backgroundColor = "green";
         //waits for pad's keyCode to be let off
         window.addEventListener('keyup', function(event) {
             if (event.keyCode == key){
@@ -69,6 +70,7 @@ musicApp.factory('Note', function(){
             restart(song, pad);
             song.loop = true;
             song.play();
+            document.getElementById(pad).style.backgroundColor = "purple";
         }
         else{
             song.loop = false;
@@ -86,7 +88,7 @@ musicApp.factory('Note', function(){
             song.onended = function() {
                 document.getElementById(pad).style.backgroundColor = "";
             }
-            document.getElementById(pad).style.backgroundColor = colorSelection;
+            document.getElementById(pad).style.backgroundColor = "red";
         }
         //someone clicked to stop track
         else {

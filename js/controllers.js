@@ -1,25 +1,14 @@
-musicApp.controller('audioPlayController', function($scope, allNotes, $rootScope) {
+musicApp.controller('audioPlayController', function($scope, allNotes, $rootScope, stopMusic) {
 
 
     //calls all the play functions in note class
     $scope.padplay = function(pad){
         allNotes[pad].play();
     };
-function killSwitch() {
-      for (i = 1; i <= 16; i++){
-          var pad = 'pad' + i;
-          allNotes[pad].stop();
-      }
+    
+    $scope.killSwitch = function(){
+      stopMusic();
     }
-    window.addEventListener('keydown', function(event) {
-      switch (event.keyCode) {
-        case 16:
-        for (i = 0; i <= 30; i++){
-            var pad = 'pad' + i;
-            allNotes[pad].stop();
-        }
-      }
-    });
 
   //  Master Volume slider logic to adjust volume
     var slider = document.getElementById('volume');
@@ -38,9 +27,18 @@ function killSwitch() {
 });
 
 //seperate controller for keyboard input
-musicApp.controller('keyboardController', function($scope, allNotes, $rootScope) {
-
+musicApp.controller('keyboardController', function($scope, allNotes, $rootScope, stopMusic) {
+    
+    //listens for shift to stop music
+    window.addEventListener('keydown', function(event) {
+      if (event.shiftKey) {
+        stopMusic();
+      }
+    });
+    
+    
     //switch case for all possible keyboard presses
+    //also listens for arrow keys
     window.addEventListener('keydown', function(event) {
     if ($rootScope.editing){
         return;
@@ -160,6 +158,12 @@ musicApp.controller('keyboardController', function($scope, allNotes, $rootScope)
     case 77: // m
         allNotes.padM.play();
         break;
+  /*  case 38: // up arrow
+        allNotes.padN.play();
+        break;
+    case 40: // down arrow
+        allNotes.padM.play();
+        break;*/
   }
 }, false);
 
@@ -167,7 +171,7 @@ musicApp.controller('keyboardController', function($scope, allNotes, $rootScope)
 
 
 
-musicApp.controller('infoController', function($scope, allNotes, $rootScope) {
+musicApp.controller('infoController', function($scope, allNotes, $rootScope, stopMusic) {
 
     //toggle for edit pad mode
     $scope.editPad = function(){
@@ -177,10 +181,7 @@ musicApp.controller('infoController', function($scope, allNotes, $rootScope) {
         else {
 
             //stops all tracks before going to edit
-            for (i = 1; i <= 16; i++){
-                var pad = 'pad' + i;
-                allNotes[pad].stop();
-            }
+            stopMusic();
             $rootScope.editing = true;
         }
     }

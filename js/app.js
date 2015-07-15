@@ -41,3 +41,13 @@ musicApp.directive('padLayout', function() {
     templateUrl: 'views/padLayout.html'
   };
 });
+
+musicApp.factory('stopMusic', function(allNotes){
+    var stopMusic = function(){
+        //grabs every reference in allNotes and stops
+        angular.forEach(allNotes, function(value, key) {
+            value.stop();
+        });
+    }
+    return stopMusic;
+});
