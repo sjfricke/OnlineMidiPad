@@ -284,48 +284,62 @@
   border-radius: .5em;
   width: 4.9em;
   height: 4.67em;
-  left: 63.05em;
-  top: 21.37em;
+  left: 14.2em;
+  top: 26.94em;
 }
 #padX{
-    position: absolute;
-    background-color: inherit;
-    border-radius: .2em;
-    width: 2.16em;
-    height: 2.15em;
-    left: 8.95em;
-    top: 11.97em;
+  position: absolute;
+  background-color: inherit;
+  border-radius: .5em;
+  width: 4.9em;
+  height: 4.67em;
+  left: 19.95em;
+  top: 26.94em;
 }
 #padC{
-    position: absolute;
-    background-color: inherit;
-    border-radius: .2em;
-    width: 2.16em;
-    height: 2.15em;
-    left: 11.5em;
-    top: 11.97em;
+  position: absolute;
+  background-color: inherit;
+  border-radius: .5em;
+  width: 4.9em;
+  height: 4.67em;
+  left: 25.7em;
+  top: 26.94em;
 }
 #padV{
-    position: absolute;
-    background-color: inherit;
-    border-radius: .2em;
-    width: 2.16em;
-    height: 2.15em;
-    left: 14.06em;
-    top: 11.97em;
+  position: absolute;
+  background-color: inherit;
+  border-radius: .5em;
+  width: 4.9em;
+  height: 4.67em;
+  left: 31.45em;
+  top: 26.94em;
 }
 #padB{
+  position: absolute;
+  background-color: inherit;
+  border-radius: .5em;
+  width: 4.9em;
+  height: 4.67em;
+  left: 37.2em;
+  top: 26.94em;
 }
 #padN{
+  position: absolute;
+  background-color: inherit;
+  border-radius: .5em;
+  width: 4.9em;
+  height: 4.67em;
+  left: 42.95em;
+  top: 26.94em;
 }
 #padM{
-    position: absolute;
-    background-color: inherit;
-    border-radius: .2em;
-    width: 2.16em;
-    height: 2.15em;
-    left: 6.39em;
-    top: 11.95em;
+  position: absolute;
+  background-color: inherit;
+  border-radius: .5em;
+  width: 4.9em;
+  height: 4.67em;
+  left: 48.7em;
+  top: 26.94em;
 }
 
 

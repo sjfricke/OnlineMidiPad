@@ -49,6 +49,7 @@ Design and support by: Brady Boettcher
 
             <p>Stop pads once they're playing by pressing SHIFT</p>
 
+            <p>All keys in red outline are playable.</p>
 
         </div>
         <!--Div button for editing pad section-->
@@ -61,10 +62,12 @@ Design and support by: Brady Boettcher
         <div class="volume" id="volume"></div>
         <!--Image of midi pad-->
         <img id="pad" src="img/keyboard.jpg"/>
+        <img id="outline" src="img/keyboardOutline.jpg"/>
 
         <pad-layout></pad-layout>
 
-        <button type="button" id="killswitch" onclick="killSwitch()">Stop Music (SHIFT)</button>
+        <button type="button" class="killswitch" id="kill1" onclick="killSwitch()">Stop Music (SHIFT)</button>
+        <button type="button" class="killswitch" id="kill2" onclick="killSwitch()">Stop Music (SHIFT)</button>
 
     </div>
       <!--hold editing directive-->

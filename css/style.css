@@ -30,6 +30,16 @@ overflow: hidden;
     pointer-events: none;
 }
 
+#outline{
+  position: absolute;
+  pointer-events: none;
+  z-index: 3;
+  top: 9.3em;
+  height: 38.85em;
+  left: 6.2em;
+  width: 84.5em;
+}
+
 
 .hovering:hover{
     background-color: white;
@@ -40,15 +50,22 @@ overflow: hidden;
     background-color:floralwhite;
 }
 
-#killswitch{
+.killswitch{
   z-index: 2;
   position: absolute;
-  top: 27em;
-  left: 1.24em;
   border-radius: .5em;
   width: 12.1em;
   height: 4.67em;
+}
 
+#kill1{
+  top: 27em;
+  left: 1.24em;
+}
+
+#kill2{
+  top: 27em;
+  left: 71.62em;
 }
 
 #editPad{
