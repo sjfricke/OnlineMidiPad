@@ -145,3 +145,109 @@ overflow: hidden;
     z-index: 5;
     top: 290px;
 }
+
+/* ------------------------------------------------------------------------------------------------------
+                                                Volume levels
+------------------------------------------------------------------------------------------------------ */
+.volumeLevel0{
+}
+.volumeLevel1{
+  position: absolute;
+  background-color: greenyellow;
+  border-radius: .5em;
+  width: 4.86em;
+  height: .54em;
+  left: 73.1em;
+  top: 37.4em;
+  z-index: 1;
+}
+.volumeLevel2{
+  position: absolute;
+  background-color: greenyellow;
+  border-radius: .5em;
+  width: 4.86em;
+  height: 1.08em;
+  left: 73.1em;
+  top: 36.9em;
+  z-index: 1;
+}
+.volumeLevel3{
+  position: absolute;
+  background-color: greenyellow;
+  border-radius: .5em;
+  width: 4.86em;
+  height: 1.62em;
+  left: 73.1em;
+  top: 36.36em;
+  z-index: 1;
+}
+.volumeLevel4{
+  position: absolute;
+  background-color: greenyellow;
+  border-radius: .5em;
+  width: 4.86em;
+  height: 2.16em;
+  left: 73.1em;
+  top: 35.8em;
+  z-index: 1;
+}
+.volumeLevel5{
+  position: absolute;
+  background-color: greenyellow;
+  border-radius: .5em;
+  width: 4.86em;
+  height: 2.7em;
+  left: 73.1em;
+  top: 35.3em;
+  z-index: 1;
+}
+.volumeLevel6{
+  position: absolute;
+  background-color: greenyellow;
+  border-radius: .5em;
+  width: 4.86em;
+  height: 3.24em;
+  left: 73.1em;
+  top: 34.75em;
+  z-index: 1;
+}
+.volumeLevel7{
+  position: absolute;
+  background-color: greenyellow;
+  border-radius: .5em;
+  width: 4.86em;
+  height: 3.78em;
+  left: 73.1em;
+  top: 34.2em;
+  z-index: 1;
+}
+.volumeLevel8{
+  position: absolute;
+  background-color: greenyellow;
+  border-radius: .5em;
+  width: 4.86em;
+  height: 4.32em;
+  left: 73.1em;
+  top: 33.67em;
+  z-index: 1;
+}
+.volumeLevel9{
+  position: absolute;
+  background-color: greenyellow;
+  border-radius: .5em;
+  width: 4.86em;
+  height: 4.86em;
+  left: 73.1em;
+  top: 33.13em;
+  z-index: 1;
+}
+.volumeLevel10{
+  position: absolute;
+  background-color: greenyellow;
+  border-radius: .5em;
+  width: 4.86em;
+  height: 5.4em;
+  left: 73.1em;
+  top: 32.6em;
+  z-index: 1;
+}

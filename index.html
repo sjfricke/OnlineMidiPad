@@ -59,20 +59,20 @@ Design and support by: Brady Boettcher
     <div ng-controller="audioPlayController as audio" ng-hide="editing" ng-cloak>
         <!--Deals with all audio logic-->
         <!--Volume slider-->
-        <div class="volume" id="volume"></div>
+        <!--<div class="volume" id="volume"></div>-->
         <!--Image of midi pad-->
         <img id="pad" src="img/keyboard.jpg"/>
         <img id="outline" src="img/keyboardOutline.jpg"/>
 
         <pad-layout></pad-layout>
 
-        <button type="button" class="killswitch" id="kill1" ng-click="killSwitch()">Stop Music (SHIFT)</button>
-        <button type="button" class="killswitch" id="kill2" ng-click="killSwitch()">Stop Music (SHIFT)</button>
-
+        
     </div>
       <!--hold editing directive-->
 
-      <div ng-controller="keyboardController"><!--holds keyboard logic--></div>
+    <div ng-controller="keyboardController"><!--holds keyboard logic-->
+        <div ng-class="volumeClass"></div>
+    </div>
 
 
       <!-- noUIslider -->

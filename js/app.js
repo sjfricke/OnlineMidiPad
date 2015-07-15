@@ -7,7 +7,7 @@ musicApp.run(function($rootScope){
 
  
 
-    //Master Volume sliders declared and created
+   /* //Master Volume sliders declared and created
     var slider = document.getElementById('volume');
     noUiSlider.create(slider, {
 	start: .2,
@@ -18,7 +18,7 @@ musicApp.run(function($rootScope){
 		'max': 1
 	}
 
-    });
+    });*/
 
 
 
@@ -50,4 +50,14 @@ musicApp.factory('stopMusic', function(allNotes){
         });
     }
     return stopMusic;
+});
+
+musicApp.factory('setVolume', function(allNotes){
+    var setVolume = function(volume){
+        //grabs every reference in allNotes and stops
+        angular.forEach(allNotes, function(value, key) {
+            value.setVolume(volume);
+        });
+    }
+    return setVolume;
 });

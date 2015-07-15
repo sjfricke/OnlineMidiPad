@@ -10,7 +10,8 @@ musicApp.controller('audioPlayController', function($scope, allNotes, $rootScope
       stopMusic();
     }
 
-  //  Master Volume slider logic to adjust volume
+    
+  /*//  Master Volume slider logic to adjust volume
     var slider = document.getElementById('volume');
     $scope.volume = .8;
     //HTML audio between 0 and 1 for 0 to 100%
@@ -22,12 +23,16 @@ musicApp.controller('audioPlayController', function($scope, allNotes, $rootScope
             var pad = 'pad' + i;
             allNotes[pad].setVolume($scope.volume);
         }
-    });
+    });*/
 
 });
 
 //seperate controller for keyboard input
-musicApp.controller('keyboardController', function($scope, allNotes, $rootScope, stopMusic) {
+musicApp.controller('keyboardController', function($scope, allNotes, $rootScope, stopMusic, setVolume) {
+    
+    //set volume at 8
+    $scope.volumeClass = 'volumeLevel8';
+    $scope.volumeLevel = 8;
     
     //listens for shift to stop music
     window.addEventListener('keydown', function(event) {
@@ -158,12 +163,28 @@ musicApp.controller('keyboardController', function($scope, allNotes, $rootScope,
     case 77: // m
         allNotes.padM.play();
         break;
-  /*  case 38: // up arrow
-        allNotes.padN.play();
+    case 38: // up arrow
+        if ($scope.volumeLevel < 10){
+            //incremenets, concat string for class, and applies
+            $scope.volumeLevel++;
+            $scope.$apply(function () {
+                $scope.volumeClass = 'volumeLevel' + $scope.volumeLevel;
+            });
+            setVolume($scope.volumeLevel * .1);
+            //multiply by .1 cause HTML range is [0,1]
+        }
         break;
     case 40: // down arrow
-        allNotes.padM.play();
-        break;*/
+        if ($scope.volumeLevel > 0){
+            //decremenets, concat string for class, and applies
+            $scope.volumeLevel--;
+            $scope.$apply(function () {
+                $scope.volumeClass = 'volumeLevel' + $scope.volumeLevel;
+            });
+            setVolume($scope.volumeLevel * .1);
+            //multiply by .1 cause HTML range is [0,1]
+        }
+        break;
   }
 }, false);
 

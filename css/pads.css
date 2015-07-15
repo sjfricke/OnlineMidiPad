@@ -342,11 +342,32 @@
   top: 26.94em;
 }
 
+/*Function Keys*/
+#padShiftLeft{
+  position: absolute;
+  background-color: inherit;
+  border-radius: .5em;
+  width: 12.1em;
+  height: 4.67em;
+  left: 1.2em;
+  top: 26.94em;
+
+  text-align: center;  
+}
+#padShiftRight{
+  position: absolute;
+  background-color: inherit;
+  border-radius: .5em;
+  width: 12em;
+  height: 4.67em;
+  left: 71.7em;
+  top: 26.94em;
+
+  text-align: center;
+}
 
 
-
-
-#pad1:hover, #pad2:hover, #pad3:hover, #pad4:hover, #pad5:hover, #pad6:hover, #pad7:hover, #pad8:hover, #pad9:hover, #pad0:hover, #padDash:hover, #padEquals:hover, #padQ:hover, #padW:hover, #padE:hover, #padR:hover, #padT:hover, #padY:hover, #padU:hover, #padI:hover, #padO:hover, #padP:hover, #padA:hover, #padS:hover, #padD:hover, #padF:hover, #padG:hover, #padH:hover, #padJ:hover, #padK:hover, #padL:hover, #padZ:hover, #padX:hover, #padC:hover, #padV:hover, #padN:hover, #padM:hover{
+#pad1:hover, #pad2:hover, #pad3:hover, #pad4:hover, #pad5:hover, #pad6:hover, #pad7:hover, #pad8:hover, #pad9:hover, #pad0:hover, #padDash:hover, #padEquals:hover, #padQ:hover, #padW:hover, #padE:hover, #padR:hover, #padT:hover, #padY:hover, #padU:hover, #padI:hover, #padO:hover, #padP:hover, #padA:hover, #padS:hover, #padD:hover, #padF:hover, #padG:hover, #padH:hover, #padJ:hover, #padK:hover, #padL:hover, #padZ:hover, #padX:hover, #padC:hover, #padV:hover, #padN:hover, #padM:hover, #padShiftRight:hover, #padShiftLeft:hover{
     background-color: aliceblue;
     cursor: pointer;
 }
