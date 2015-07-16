@@ -5,12 +5,12 @@ musicApp.controller('audioPlayController', function($scope, allNotes, $rootScope
     $scope.padplay = function(pad){
         allNotes[pad].play();
     };
-    
+
     $scope.killSwitch = function(){
       stopMusic();
     }
 
-    
+
   /*//  Master Volume slider logic to adjust volume
     var slider = document.getElementById('volume');
     $scope.volume = .8;
@@ -29,19 +29,26 @@ musicApp.controller('audioPlayController', function($scope, allNotes, $rootScope
 
 //seperate controller for keyboard input
 musicApp.controller('keyboardController', function($scope, allNotes, $rootScope, stopMusic, setVolume) {
-    
+
     //set volume at 8
     $scope.volumeClass = 'volumeLevel8';
     $scope.volumeLevel = 8;
-    
+
     //listens for shift to stop music
     window.addEventListener('keydown', function(event) {
       if (event.shiftKey) {
         stopMusic();
       }
     });
-    
-    
+
+    //Disable window scroll when arrow keys are pressed to adjust volume
+    window.addEventListener("keydown", function(event) {
+    // space and arrow keys
+    if([38, 40].indexOf(event.keyCode) > -1) {
+        event.preventDefault();
+    }
+}, false);
+
     //switch case for all possible keyboard presses
     //also listens for arrow keys
     window.addEventListener('keydown', function(event) {
