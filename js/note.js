@@ -6,12 +6,13 @@ Contains all playback and setting of each seperate note
 musicApp.factory('Note', function(){
 
     //Constructer
-    var Note = function(pad, key, action, music){
+    var Note = function(pad, key, action, music, name){
         this.pad = pad;
         this.key = key;
         this.action = action;
         this.music = music;
         this.song = new Audio(this.music);
+        this.name = name;
     };
     
      //play from controller
@@ -97,18 +98,27 @@ musicApp.factory('Note', function(){
     }
     
    //setting music in edit mode
-   Note.prototype.setMusic = function(url){
+   Note.prototype.setMusic = function(url, name){
         this.music = './MusicSections/' + url + '.mp3';
         this.song = new Audio(this.music);
+        this.name = name;
     };
 
-    //TODO
     //to grab part of URL to show what song is on pad
     Note.prototype.getMusic = function(){
         //substring of the url that is the song name
-        return this.music.substring(16, this.music.length - 4);
+        return this.name;
     };
 
+    //setting action type
+    Note.prototype.setAction = function(type){
+        this.action = type;
+    }
+    
+    Note.prototype.getAction = function(){
+        return this.action;
+    }
+    
     //restarts song when called to stop
     Note.prototype.stop = function(){
         restart(this.song, this.pad);

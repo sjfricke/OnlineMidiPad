@@ -11,7 +11,7 @@ Design and support by: Brady Boettcher
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-    <title>CSS is hellspawn</title>
+    <title>Online Midi Pad</title>
 
        <!-- Angular Material CSS now available via Google CDN; version 0.10 used here -->
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.10.0/angular-material.min.css">
@@ -49,11 +49,14 @@ Design and support by: Brady Boettcher
 
             <p>Stop pads once they're playing by pressing SHIFT</p>
 
-            <p>All keys in red outline are playable.</p>
-
+            <p>All keys in red outline are playable. (currently only most)</p>
+        
         </div>
         <!--Div button for editing pad section-->
-        <div id="editPad" class="hovering active" ng-click="editPad()"> </div>
+        <div id="editPad" class="hovering active" ng-click="editPad()"> <br> Edit Keys <br>
+            <text style="font-size: 50%; color: red;" ng-show="editing">Editing mode</text> 
+        </div>
+        
     </div>
 
     <div ng-controller="audioPlayController as audio" ng-hide="editing" ng-cloak>
@@ -69,7 +72,8 @@ Design and support by: Brady Boettcher
 
     </div>
       <!--hold editing directive-->
-
+      <pad-edit ng-show="editing"></pad-edit>
+      
     <div ng-controller="keyboardController"><!--holds keyboard logic-->
         <div ng-class="volumeClass"></div>
     </div>

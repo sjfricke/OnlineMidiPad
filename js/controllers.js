@@ -231,10 +231,21 @@ musicApp.controller('editController', function($scope, $http, allNotes){
     $http.get('js/songData.json').success(function(data) {
         $scope.songList = data;
     });
+    
+    //grabs songs out of folder
+    $scope.showFolder = function(folder){
+        $scope.folderDisplay = folder;
+    }
+    
     //calls to concat string for pathfile
-    $scope.songPick = function(songUrl){
-        allNotes[$scope.padSelect].setMusic(songUrl);
+    $scope.songPick = function(songUrl, name){
+        
+        allNotes[$scope.padSelect].setMusic(songUrl, name);
         $scope.padPicked = false;
+       
+        //uncomment if we to start picking process each time
+        /* $scope.folder = '';
+        $scope.folderDisplay = '';*/
     }
     //calls for information of current song on pad
     $scope.currentSong = function(pad){
@@ -242,4 +253,12 @@ musicApp.controller('editController', function($scope, $http, allNotes){
             return allNotes[pad].getMusic();
         }
     }
+    
+    $scope.getAction = function(){
+        return allNotes[$scope.padSelect].getAction();
+    }
+    
+    $scope.actionChange = function(type) {
+        allNotes[$scope.padSelect].setAction(type);
+    };
 });

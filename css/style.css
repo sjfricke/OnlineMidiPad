@@ -70,23 +70,33 @@ overflow: hidden;
 
 #editPad{
     position: absolute;
-    width: 37px;
-    height: 14px;
-    right: 34px;
-    top: 83px;
+    background-color: darkgrey;
+    width: 140px;
+    border-radius: 10px;
+    height: 50px;
+    right: 200px;
+    top: 33px;
+    text-align: center;
     z-index: 3;
 }
-
+#editPad:hover{
+    background-color: aliceblue;
+    cursor: pointer;
+}
+#editPad:active{
+    background-color: azure;
+}
 /* ------------------------------------------------------------------------------------------------------
                                                 Edit Screen
 ------------------------------------------------------------------------------------------------------ */
 
 #editNotice{
     position: absolute;
-    right: 200px;
+    text-align: center;
+    width: 100%;
     font-size: 140%;
-    bottom: 40px;
-    color: white;
+    bottom: 4px;
+    color:deepskyblue;
     z-index: 4;
 }
 
@@ -98,7 +108,7 @@ overflow: hidden;
     width: 80%;
     border: 5px solid white;
     background-color: aliceblue;
-    z-index: 1;
+    z-index: 8;
 }
 
 #exitEditing{
@@ -107,7 +117,7 @@ overflow: hidden;
     position: absolute;
     bottom: 0;
     right: 0;
-
+    z-index: 8;
 }
 
 #selectionUL{
@@ -119,13 +129,14 @@ overflow: hidden;
     list-style-type: none;
     text-align: center;
     padding-left: 0;
-
+    z-index: 8;
 }
 
 #editInfo{
     position: absolute;
     bottom: 0px;
     left: 0px;
+    z-index: 8;
 }
 
 
