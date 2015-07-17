@@ -15,8 +15,8 @@ musicApp.service('allNotes', function (Note) {
     var pad8 = new Note('pad8', 56, 'trigger', './MusicSections/Pop Culture/dare.mp3', 'Dare');
     var pad9 = new Note('pad9', 57, 'trigger', './MusicSections/Pop Culture/drumRiff.mp3', 'Drum Riff');
     var pad0 = new Note('pad0', 48, 'trigger', './MusicSections/Pop Culture/heavyCross.mp3', 'Heavy Cross');
-    var padDash = new Note('padDash', 173, 'trigger', './MusicSections/Pop Culture/ho.mp3', 'Ho');
-    var padEquals = new Note('padEquals', 61, 'trigger', './MusicSections/Pop Culture/hungOut.mp3', 'Hung Out');
+    var padDash = new Note('padDash', 189, 'trigger', './MusicSections/Pop Culture/ho.mp3', 'Ho');
+    var padEquals = new Note('padEquals', 187, 'trigger', './MusicSections/Pop Culture/hungOut.mp3', 'Hung Out');
     var padQ = new Note('padQ', 81, 'trigger', './MusicSections/Pop Culture/iDecided.mp3', 'I Decided');
     var padW = new Note('padW', 87, 'trigger', './MusicSections/Pop Culture/meAndYou1.mp3', 'Me And You 1');
     var padE = new Note('padE', 69, 'trigger', './MusicSections/Pop Culture/meAndYou2.mp3', 'Me And You 2');
@@ -39,7 +39,7 @@ musicApp.service('allNotes', function (Note) {
     var padJ = new Note('padJ', 74, 'trigger', './MusicSections/Pop Culture/wow4.mp3', 'Wow 4');
     var padK = new Note('padK', 75, 'trigger', './MusicSections/Pop Culture/wow6.mp3', 'Wow 6');
     var padL = new Note('padL', 76, 'trigger', './MusicSections/Pop Culture/wowEnd.mp3', 'Wow End');
-    var padSemicolon = new Note('padSemicolon', 59, 'trigger', './MusicSections/Pop Culture/snareBreak.mp3', 'Snare Break');
+    var padSemicolon = new Note('padSemicolon', 186, 'trigger', './MusicSections/Pop Culture/snareBreak.mp3', 'Snare Break');
     var padZ = new Note('padZ', 90, 'trigger', './MusicSections/Pop Culture/wowplus1.mp3', 'Wow Plus 1');
     var padX = new Note('padX', 88, 'trigger', './MusicSections/Extra/23.mp3', '23');
     var padC = new Note('padC', 67, 'trigger', './MusicSections/Extra/Pinball.mp3', 'Pinball');

@@ -52,6 +52,7 @@ musicApp.controller('keyboardController', function($scope, allNotes, $rootScope,
     //switch case for all possible keyboard presses
     //also listens for arrow keys
     window.addEventListener('keydown', function(event) {
+    console.log(event.keyCode);
     if ($rootScope.editing){
         return;
     }
@@ -86,10 +87,10 @@ musicApp.controller('keyboardController', function($scope, allNotes, $rootScope,
     case 48: // 0
         allNotes.pad0.play();
         break;
-    case 173: // -
+    case 189: // -
         allNotes.padDash.play();
         break;
-    case 61: // =
+    case 187: // =
         allNotes.padEquals.play();
         break;
     case 81: // q
@@ -158,7 +159,7 @@ musicApp.controller('keyboardController', function($scope, allNotes, $rootScope,
     case 76: // l
         allNotes.padL.play();
         break;
-    case 59: // Semicolon
+    case 186: // Semicolon
         allNotes.padSemicolon.play();
         break;
     case 90: // z
