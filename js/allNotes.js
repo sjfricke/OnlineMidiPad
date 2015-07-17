@@ -5,7 +5,7 @@ musicApp.service('allNotes', function (Note) {
 
     //new Note(pad id, keyCode, action type, song path, song name);
 
-    var pad1 = new Note('pad1', 49, 'trigger', './MusicSections/Pop Culture/aerodynamic.mp3', 'Aerodynamic');
+    var pad1 = new Note('pad1', 49, 'trigger', './MusicSections/Pop Culture/aerodynamicLong.mp3', 'Aerodynamic Long');
     var pad2 = new Note('pad2', 50, 'trigger', './MusicSections/Pop Culture/aroundTheWorld.mp3', 'Around The World');
     var pad3 = new Note('pad3', 51, 'trigger', './MusicSections/Pop Culture/babyOneMoreTime.mp3', 'Baby One More Time');
     var pad4 = new Note('pad4', 52, 'trigger', './MusicSections/Pop Culture/bigChordArranged.mp3', 'Big Chord Arranged');
@@ -18,9 +18,9 @@ musicApp.service('allNotes', function (Note) {
     var padDash = new Note('padDash', 189, 'trigger', './MusicSections/Pop Culture/ho.mp3', 'Ho');
     var padEquals = new Note('padEquals', 187, 'trigger', './MusicSections/Pop Culture/hungOut.mp3', 'Hung Out');
     var padQ = new Note('padQ', 81, 'trigger', './MusicSections/Pop Culture/iDecided.mp3', 'I Decided');
-    var padW = new Note('padW', 87, 'trigger', './MusicSections/Pop Culture/meAndYou1.mp3', 'Me And You 1');
-    var padE = new Note('padE', 69, 'trigger', './MusicSections/Pop Culture/meAndYou2.mp3', 'Me And You 2');
-    var padR = new Note('padR', 82, 'trigger', './MusicSections/Pop Culture/meAndYou3.mp3', 'Me And You 3');
+    var padW = new Note('padW', 87, 'trigger', './MusicSections/Pop Culture/meAndYouPlus1.mp3', 'Me And You Plus 1');
+    var padE = new Note('padE', 69, 'trigger', './MusicSections/Pop Culture/meAndYouMinus2.mp3', 'Me And You Minus 2');
+    var padR = new Note('padR', 82, 'trigger', './MusicSections/Pop Culture/meAndYouPlus3.mp3', 'Me And You Plus 3');
     var padT = new Note('padT', 84, 'trigger', './MusicSections/Pop Culture/ohw.mp3', 'Ohw');
     var padY = new Note('padY', 89, 'trigger', './MusicSections/Pop Culture/ohYeah.mp3', 'Oh Yeah');
     var padU = new Note('padU', 85, 'trigger', './MusicSections/Pop Culture/pianoStacatto.mp3', 'Piano Stacatto');
@@ -28,16 +28,16 @@ musicApp.service('allNotes', function (Note) {
     var padO = new Note('padO', 79, 'trigger', './MusicSections/Pop Culture/snareBeat.mp3', 'Snare Beat');
     var padP = new Note('padP', 80, 'trigger', './MusicSections/Pop Culture/snareBreak.mp3', 'Snare Break');
     var padLeftBracket = new Note('padLeftBracket', 219, 'trigger', './MusicSections/Pop Culture/snareBreak.mp3', 'Snare Break');
-    var padRightBracket = new Note('padRightBracket', 221, 'trigger', './MusicSections/Pop Culture/snareBreak.mp3', 'Snare Break');
-    var padBackslash = new Note('padBackslash', 220, 'trigger', './MusicSections/Pop Culture/snareBreak.mp3', 'Snare Break');
+    var padRightBracket = new Note('padRightBracket', 221, 'trigger', './MusicSections/Pop Culture/aerodynamicShort.mp3', 'Aerodynamic Short');
+    var padBackslash = new Note('padBackslash', 220, 'trigger', './MusicSections/Pop Culture/wowPlus3short.mp3', 'Wow Plus 3 Short');
     var padA = new Note('padA', 65, 'trigger', './MusicSections/Pop Culture/takeItOff.mp3', 'Take It Off');
     var padS = new Note('padS', 83, 'trigger', './MusicSections/Pop Culture/vivaLaVida.mp3', 'Viva La Vida');
     var padD = new Note('padD', 68, 'trigger', './MusicSections/Pop Culture/voca.mp3', 'Voca');
     var padF = new Note('padF', 70, 'trigger', './MusicSections/Pop Culture/whatYouWaitingFor.mp3', 'What You Waiting For');
-    var padG = new Note('padG', 71, 'trigger', './MusicSections/Pop Culture/wow1.mp3', 'Wow 1');
-    var padH = new Note('padH', 72, 'trigger', './MusicSections/Pop Culture/wow3.mp3', 'Wow 3');
-    var padJ = new Note('padJ', 74, 'trigger', './MusicSections/Pop Culture/wow4.mp3', 'Wow 4');
-    var padK = new Note('padK', 75, 'trigger', './MusicSections/Pop Culture/wow6.mp3', 'Wow 6');
+    var padG = new Note('padG', 71, 'trigger', './MusicSections/Pop Culture/wowPlus1.mp3', 'Wow Plus 1');
+    var padH = new Note('padH', 72, 'trigger', './MusicSections/Pop Culture/wowPlus3long.mp3', 'Wow Plus 3 Long');
+    var padJ = new Note('padJ', 74, 'trigger', './MusicSections/Pop Culture/wowMinus4.mp3', 'Wow Minus 4');
+    var padK = new Note('padK', 75, 'trigger', './MusicSections/Pop Culture/wowPlus6.mp3', 'Wow Plus 6');
     var padL = new Note('padL', 76, 'trigger', './MusicSections/Pop Culture/wowEnd.mp3', 'Wow End');
     var padSemicolon = new Note('padSemicolon', 186, 'trigger', './MusicSections/Pop Culture/snareBreak.mp3', 'Snare Break');
     var padZ = new Note('padZ', 90, 'trigger', './MusicSections/Pop Culture/wowplus1.mp3', 'Wow Plus 1');
