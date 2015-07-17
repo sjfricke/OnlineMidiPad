@@ -2,163 +2,42 @@
                                                 Main Screen
 ------------------------------------------------------------------------------------------------------ */
 body{
-background-color: black;
 line-height: 1;
+height: 100%;
+width: 100%;
+overflow: hidden;
 }
 
 #info{
-    width: 450px;
-    color: white;
-    float: left;
-    padding-left: 10px;
+    width: 80em;
+    float: top;
+    left: 2em;
+    position: absolute;
+    z-index: 1;
+
+	width: 100%;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+	filter: alpha(opacity=50);
+	-moz-opacity:0.5;
+	-khtml-opacity: 0.5;
+	opacity: 0.99;
+  color: black;
 }
 
 #pad{
     position: absolute;
-    font-size: 36px;
-    text-align: center;
-    width: 800px;
-    right: 0;
-
+    width: 85em;
+    pointer-events: none;
 }
 
-.row1, .row2, .row3, .row4{
-/*background-color: black;*/
-}
-
-#pad16{
-    position: absolute;     font-size: 36px;     text-align: center;
-    font-size: 36px;
-    text-align: center;
-    background-color: inherit;
-    width: 107px;
-    height: 108px;
-    right: 253px;
-    top: 54px;
-}
-#pad15{
-    position: absolute;     font-size: 36px;     text-align: center;
-    background-color: inherit;
-    width: 107px;
-    height: 108px;
-    right: 386px;
-    top: 54px;
-}
-#pad14{
-    position: absolute;     font-size: 36px;     text-align: center;
-    background-color: inherit;
-    width: 107px;
-    height: 108px;
-    right: 519px;
-    top: 54px;
-}
-#pad13{
-    position: absolute;     font-size: 36px;     text-align: center;
-    background-color: inherit;
-    width: 107px;
-    height: 108px;
-    right: 652px;
-    top: 52px;
-}
-#pad12{
-    position: absolute;     font-size: 36px;     text-align: center;
-    background-color: inherit;
-    width: 107px;
-    height: 108px;
-    right: 254px;
-    top: 187px;
-}
-#pad11{
-    position: absolute;     font-size: 36px;     text-align: center;
-    background-color: inherit;
-    width: 107px;
-    height: 108px;
-    right: 386px;
-    top: 187px;
-}
-#pad10{
-    position: absolute;     font-size: 36px;     text-align: center;
-    background-color: inherit;
-    width: 107px;
-    height: 108px;
-    right: 519px;
-    top: 187px;
-}
-#pad9{
-    position: absolute;     font-size: 36px;     text-align: center;
-    background-color: inherit;
-    width: 107px;
-    height: 108px;
-    right: 651px;
-    top: 187px;
-}
-#pad8{
-    position: absolute;     font-size: 36px;     text-align: center;
-    background-color: inherit;
-    width: 107px;
-    height: 108px;
-    right: 254px;
-    top: 320px;
-}
-#pad7{
-    position: absolute;     font-size: 36px;     text-align: center;
-    background-color: inherit;
-    width: 107px;
-    height: 108px;
-    right: 386px;
-    top: 320px;
-}
-#pad6{
-    position: absolute;     font-size: 36px;     text-align: center;
-    background-color: inherit;
-    width: 107px;
-    height: 108px;
-    right: 519px;
-    top: 320px;
-}
-#pad5{
-    position: absolute;     font-size: 36px;     text-align: center;
-    background-color: inherit;
-    width: 107px;
-    height: 108px;
-    right: 651px;
-    top: 320px;
-}
-#pad4{
-    position: absolute;     font-size: 36px;     text-align: center;
-    background-color: inherit;
-    width: 107px;
-    height: 108px;
-    right: 254px;
-    top: 450px;
-}
-#pad3{
-    position: absolute;     font-size: 36px;     text-align: center;
-    background-color: inherit;
-    width: 107px;
-    height: 108px;
-    right: 386px;
-    top: 450px;
-}
-#pad2{
-    position: absolute;     font-size: 36px;     text-align: center;
-    background-color: inherit;
-    width: 107px;
-    height: 108px;
-    right: 519px;
-    top: 450px;
-}
-#pad1{
-    position: absolute;     font-size: 36px;     text-align: center;
-    background-color: inherit;
-    width: 107px;
-    height: 108px;
-    right: 651px;
-    top: 450px;
-}
-#pad16:hover, #pad15:hover, #pad14:hover, #pad13:hover, #pad12:hover, #pad11:hover, #pad10:hover, #pad9:hover, #pad8:hover, #pad7:hover, #pad6:hover, #pad5:hover, #pad4:hover, #pad3:hover, #pad2:hover, #pad1:hover{
-    background-color: aliceblue;
-    cursor: pointer;
+#outline{
+  position: absolute;
+  pointer-events: none;
+  z-index: 3;
+  top: 9.3em;
+  height: 38.85em;
+  left: 6.2em;
+  width: 84.5em;
 }
 
 
@@ -171,42 +50,53 @@ line-height: 1;
     background-color:floralwhite;
 }
 
-#keyHint{
-    position: absolute;
-    width: 37px;
-    height: 14px;
-    right: 112px;
-    top: 147px;
+.killswitch{
+  z-index: 2;
+  position: absolute;
+  border-radius: .5em;
+  width: 12.1em;
+  height: 4.67em;
 }
 
-#colorChange{
-    position: absolute;
-    width: 37px;
-    height: 14px;
-    right: 34px;
-    top: 147px;
-    z-index: 3;
+#kill1{
+  top: 27em;
+  left: 1.24em;
+}
+
+#kill2{
+  top: 27em;
+  left: 71.62em;
 }
 
 #editPad{
     position: absolute;
-    width: 37px;
-    height: 14px;
-    right: 34px;
-    top: 83px;
+    background-color: darkgrey;
+    width: 140px;
+    border-radius: 10px;
+    height: 50px;
+    right: 200px;
+    top: 33px;
+    text-align: center;
     z-index: 3;
 }
-
+#editPad:hover{
+    background-color: aliceblue;
+    cursor: pointer;
+}
+#editPad:active{
+    background-color: azure;
+}
 /* ------------------------------------------------------------------------------------------------------
                                                 Edit Screen
 ------------------------------------------------------------------------------------------------------ */
 
 #editNotice{
     position: absolute;
-    right: 200px;
+    text-align: center;
+    width: 100%;
     font-size: 140%;
-    bottom: 40px;
-    color: white;
+    bottom: 4px;
+    color:deepskyblue;
     z-index: 4;
 }
 
@@ -218,7 +108,7 @@ line-height: 1;
     width: 80%;
     border: 5px solid white;
     background-color: aliceblue;
-    z-index: 1;
+    z-index: 8;
 }
 
 #exitEditing{
@@ -227,7 +117,7 @@ line-height: 1;
     position: absolute;
     bottom: 0;
     right: 0;
-
+    z-index: 8;
 }
 
 #selectionUL{
@@ -239,13 +129,14 @@ line-height: 1;
     list-style-type: none;
     text-align: center;
     padding-left: 0;
-
+    z-index: 8;
 }
 
 #editInfo{
     position: absolute;
     bottom: 0px;
     left: 0px;
+    z-index: 8;
 }
 
 
@@ -255,46 +146,7 @@ line-height: 1;
                                                 noUISlider
 ------------------------------------------------------------------------------------------------------ */
 
-#red, #green, #blue {
-	margin: 10px;
-	display: inline-block;
-	height: 200px;
-}
 
-#colorpicker {
-	height: 240px;
-	width: 310px;
-	margin: 0 auto;
-	padding: 10px;
-	border: 1px solid #BFBFBF;
-    position: absolute;
-    left: 10px;
-    bottom: 10px;
-}
-
-#result {
-	margin: 60px 26px;
-	height: 100px;
-	width: 100px;
-	display: inline-block;
-	vertical-align: top;
-	color: rgb(127, 127, 127);
-	background: rgb(127, 127, 127);
-	border: 1px solid #fff;
-	box-shadow: 0 0 10px;
-}
-
-#red {
-	background: #c0392b;
-}
-
-#green {
-	background: #27ae60;
-}
-
-#blue {
-	background: #2980b9;
-}
 
 #volume {
     background-color: ghostwhite;
@@ -303,4 +155,110 @@ line-height: 1;
     right: 83px;
     z-index: 5;
     top: 290px;
+}
+
+/* ------------------------------------------------------------------------------------------------------
+                                                Volume levels
+------------------------------------------------------------------------------------------------------ */
+.volumeLevel0{
+}
+.volumeLevel1{
+  position: absolute;
+  background-color: greenyellow;
+  border-radius: .5em;
+  width: 4.86em;
+  height: .54em;
+  left: 73.1em;
+  top: 37.4em;
+  z-index: 1;
+}
+.volumeLevel2{
+  position: absolute;
+  background-color: greenyellow;
+  border-radius: .5em;
+  width: 4.86em;
+  height: 1.08em;
+  left: 73.1em;
+  top: 36.9em;
+  z-index: 1;
+}
+.volumeLevel3{
+  position: absolute;
+  background-color: greenyellow;
+  border-radius: .5em;
+  width: 4.86em;
+  height: 1.62em;
+  left: 73.1em;
+  top: 36.36em;
+  z-index: 1;
+}
+.volumeLevel4{
+  position: absolute;
+  background-color: greenyellow;
+  border-radius: .5em;
+  width: 4.86em;
+  height: 2.16em;
+  left: 73.1em;
+  top: 35.8em;
+  z-index: 1;
+}
+.volumeLevel5{
+  position: absolute;
+  background-color: greenyellow;
+  border-radius: .5em;
+  width: 4.86em;
+  height: 2.7em;
+  left: 73.1em;
+  top: 35.3em;
+  z-index: 1;
+}
+.volumeLevel6{
+  position: absolute;
+  background-color: greenyellow;
+  border-radius: .5em;
+  width: 4.86em;
+  height: 3.24em;
+  left: 73.1em;
+  top: 34.75em;
+  z-index: 1;
+}
+.volumeLevel7{
+  position: absolute;
+  background-color: greenyellow;
+  border-radius: .5em;
+  width: 4.86em;
+  height: 3.78em;
+  left: 73.1em;
+  top: 34.2em;
+  z-index: 1;
+}
+.volumeLevel8{
+  position: absolute;
+  background-color: greenyellow;
+  border-radius: .5em;
+  width: 4.86em;
+  height: 4.32em;
+  left: 73.1em;
+  top: 33.67em;
+  z-index: 1;
+}
+.volumeLevel9{
+  position: absolute;
+  background-color: greenyellow;
+  border-radius: .5em;
+  width: 4.86em;
+  height: 4.86em;
+  left: 73.1em;
+  top: 33.13em;
+  z-index: 1;
+}
+.volumeLevel10{
+  position: absolute;
+  background-color: greenyellow;
+  border-radius: .5em;
+  width: 4.86em;
+  height: 5.4em;
+  left: 73.1em;
+  top: 32.6em;
+  z-index: 1;
 }

@@ -1,5 +1,5 @@
 <!--
-Code by: Spencer Fricke - UW-Madison 
+Code by: Spencer Fricke - UW-Madison
 
 Design and support by: Brady Boettcher
 -->
@@ -11,29 +11,30 @@ Design and support by: Brady Boettcher
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-    <title>Music is MEAN</title>
+    <title>Online Midi Pad</title>
 
        <!-- Angular Material CSS now available via Google CDN; version 0.10 used here -->
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.10.0/angular-material.min.css">
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/pads.css" rel="stylesheet">
 
     <!--Angular-->
-    <script src="lib/angular.js"></script> 
+    <script src="lib/angular.js"></script>
     <script src="lib/angular-route.js" type="text/javascript"></script>
-      
+
     <!--jQuery-->
     <script src="lib/jquery-2.1.4.min.js"></script>
-      
+
 
     <!-- JS -->
     <script>var colorSelection = 'blue'; </script>
     <script src="js/app.js" type="text/javascript"></script>
     <script src="js/controllers.js" type="text/javascript"></script>
     <script src="js/note.js" type="text/javascript"></script>
-    <script src="js/color.js" type="text/javascript"></script>
+    <script src="js//allNotes.js" type="text/javascript"></script>
     <script src="js/wNumb.js" type="text/javascript"></script>
-          
-   
+
+
 
     <!-- noUIslider -->
     <link href="lib/nouislider.min.css" rel="stylesheet">
@@ -41,137 +42,43 @@ Design and support by: Brady Boettcher
 
   </head>
   <body ng-app='musicApp'>
-    <div ng-controller="infoController"> 
-    <!--Takes all info logic-->    
-        <div id="info">
-            <br>
-            <b>Online Launch Pad by Spencer Fricke </b>
-            <br><br>
-            Hold shift to loop
-            <br><br>
-            Hold 'J' to mash those buttons
-            <br><br>
-            Click 'key hint' to toggle letters on pad
-            <br><br>
-            Click 'color' to adjust color scheme
-            <br><br>
-            Adjust volume slider for full ear blasting controller
-            <br><br>
-            Edit the pads from their defaults with the 'Edit Pad' button
-            
-            <!--color picker display and slider-->
-            <div id="colorpicker" ng-show="newColor" ng-cloak>
-                <div class="sliders" id="red"></div>
-                <div class="sliders" id="green"></div>
-                <div class="sliders" id="blue"></div>
+    <div ng-controller="infoController">
+    <!--Takes all info logic-->
+    <div id="info">
+            <p>Use pads by pressing the corresponding key on your keyboard.</p>
 
-                <div id="result" class="result"></div>
-            </div>
+            <p>Stop pads once they're playing by pressing SHIFT</p>
 
+            <p>All keys in red outline are playable. (currently only most)</p>
+        
         </div>
-        <!--Div button for color change screens-->
-        <div id="colorChange" class="hovering active" ng-click="colorSwitch()"> </div>
         <!--Div button for editing pad section-->
-        <div id="editPad" class="hovering active" ng-click="editPad()"> </div>
+        <div id="editPad" class="hovering active" ng-click="editPad()"> <br> Edit Keys <br>
+            <text style="font-size: 50%; color: red;" ng-show="editing">Editing mode</text> 
+        </div>
+        
     </div>
- 
+
     <div ng-controller="audioPlayController as audio" ng-hide="editing" ng-cloak>
         <!--Deals with all audio logic-->
         <!--Volume slider-->
-        <div class="volume" id="volume"></div>
+        <!--<div class="volume" id="volume"></div>-->
         <!--Image of midi pad-->
-        <img id="pad" src="img/pad.jpg"/>
-        
-        <!--Divs of all 16 pads with letters wrapped in view and function to play-->
-        <div class="row1">
-          <div id="pad1" ng-click="padplay('pad1')">
-              <br>
-              {{keyHint[12]}}
-          </div>
-           <div id="pad2" ng-click="padplay('pad2')">
-               <br>
-              {{keyHint[13]}}
-          </div>
-           <div id="pad3" ng-click="padplay('pad3')">
-               <br>
-              {{keyHint[14]}}
-          </div>
-           <div id="pad4" ng-click="padplay('pad4')">
-               <br>
-              {{keyHint[15]}}
-          </div>
-        </div>
-          <div class="row2">
-          <div id="pad5" ng-click="padplay('pad5')">
-              <br>
-              {{keyHint[8]}}
-          </div>
-           <div id="pad6" ng-click="padplay('pad6')">
-               <br>
-              {{keyHint[9]}}
-          </div>
-           <div id="pad7" ng-click="padplay('pad7')">
-               <br>
-              {{keyHint[10]}}
-          </div>
-           <div id="pad8" ng-click="padplay('pad8')">
-               <br>
-              {{keyHint[11]}}
-          </div>
-        </div>
-          <div class="row3">
-          <div id="pad9" ng-click="padplay('pad9')">
-              <br>
-              {{keyHint[4]}}
-          </div>
-           <div id="pad10" ng-click="padplay('pad10')">
-               <br>
-              {{keyHint[5]}}
-          </div>
-           <div id="pad11" ng-click="padplay('pad11')">
-               <br>
-              {{keyHint[6]}}
-          </div>
-           <div id="pad12" ng-click="padplay('pad12')">
-               <br>
-              {{keyHint[7]}}
-          </div>
-        </div>
-          <div class="row4">
-          <div id="pad13" ng-click="padplay('pad13')">
-              <br>
-              {{keyHint[0]}}
-          </div>
-           <div id="pad14" ng-click="padplay('pad14')">
-               <br>
-               {{keyHint[1]}}
-          </div>
-           <div id="pad15" ng-click="padplay('pad15')">
-               <br>
-               {{keyHint[2]}}
-          </div>
-           <div id="pad16" ng-click="padplay('pad16')">
-               <br>
-               {{keyHint[3]}}
-          </div>
-        </div>
-        <div id="keyHint" class="hovering active" ng-click="keyHints()">  
-        </div>
-        
-        
+        <img id="pad" src="img/keyboard.jpg"/>
+        <img id="outline" src="img/keyboardOutline.png"/>
+
+        <pad-layout></pad-layout>
+
+
     </div>
       <!--hold editing directive-->
-    <div id="editing" ng-show="editing">
-        <!--put after audioController to prevent pad ID being used for CSS:active and hover-->
-        <pad-Edit></pad-Edit>  
-    </div>   
+      <pad-edit ng-show="editing"></pad-edit>
       
-      <div ng-controller="keyboardController"><!--holds keyboard logic--></div>
-      
-      
-      
-      
-      
+    <div ng-controller="keyboardController"><!--holds keyboard logic-->
+        <div ng-class="volumeClass"></div>
+    </div>
+
+
       <!-- noUIslider -->
       <script src="lib/nouislider.min.js"></script>
        <!-- Angular Material Dependencies -->

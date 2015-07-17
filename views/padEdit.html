@@ -2,70 +2,73 @@
     <div id="songSelection" ng-show="padPicked">
         <button id="exitEditing" ng-click="exitEdit()">Cancel</button>
         <text id="editInfo">Current Music <b>'{{currentSong(padSelect)}}'</b> for <b>'{{padSelect}}'</b></text>
-        <ul id="selectionUL" ng-repeat="(key, value) in songList">
-            <li id="selectionLI" class="hovering active" ng-click="songPick(value)">{{key}}</li>
+        <div id="popCultureSelect">
+        <div style="display : inline;">
+            <button ng-click="actionChange('trigger')">Trigger</button>
+            <button ng-click="actionChange('gate')">Gate</button>
+            <button ng-click="actionChange('repeat')">Repeat</button>
+            <button ng-click="actionChange('toggle')">Toggle</button>
+            [Current Action Type: {{getAction()}}]
+        </div>  
+        <br><br>
+        <select id="select" type="select" ng-model="folder" ng-options="key for (key, value) in songList" ng-click="showFolder(folder)">
+            <option value='' disabled selected style='display:none;'>Select Folder</option>
+        </select>
+        </div>
+    
+        <ul id="selectionUL" ng-repeat="song in folderDisplay">
+            <li id="selectionLI" class="hovering active" ng-click="songPick(song.path, song.name)">{{song.name}}</li>
         </ul>
     </div>
     
-    <img id="pad" src="img/pad.jpg"/>
+    <img id="pad" src="img/keyboard.jpg"/>
+    <img id="outline" src="img/keyboardOutline.png"/>
     <div id="editNotice">
-        YOU ARE NOW IN EDITING MODE - Click Pad to Edit
+        YOU ARE NOW IN EDITING MODE - Click Key to Edit
     </div>
-        <div class="row1">
-          <div id="pad1" ng-click="padpick('pad1')">
-          </div>
-           <div id="pad2" ng-click="padpick('pad2')">
+        <!-- Row One   -->
+    <div id="pad1" ng-click="padpick('pad1')"></div>
+    <div id="pad2" ng-click="padpick('pad2')"></div>
+    <div id="pad3" ng-click="padpick('pad3')"></div>
+    <div id="pad4" ng-click="padpick('pad4')"></div>
+    <div id="pad5" ng-click="padpick('pad5')"></div>
+    <div id="pad6" ng-click="padpick('pad6')"></div>
+    <div id="pad7" ng-click="padpick('pad7')"></div>
+    <div id="pad8" ng-click="padpick('pad8')"></div>
+    <div id="pad9" ng-click="padpick('pad9')"></div>
+    <div id="pad0" ng-click="padpick('pad0')"></div>
+    <div id="padDash" ng-click="padpick('padDash')"></div>
+    <div id="padEquals" ng-click="padpick('padEquals')"></div>
+<!-- Row Two -->
+    <div id="padQ" ng-click="padpick('padQ')"></div>
+    <div id="padW" ng-click="padpick('padW')"></div>
+    <div id="padE" ng-click="padpick('padE')"></div>
+    <div id="padR" ng-click="padpick('padR')"></div>
+    <div id="padT" ng-click="padpick('padT')"></div>
+    <div id="padY" ng-click="padpick('padY')"></div>
+    <div id="padU" ng-click="padpick('padU')"></div>
+    <div id="padI" ng-click="padpick('padI')"></div>
+    <div id="padO" ng-click="padpick('padO')"></div>
+    <div id="padP" ng-click="padpick('padP')"></div>
+<!-- Row Three -->
+    <div id="padA" ng-click="padpick('padA')"></div>
+    <div id="padS" ng-click="padpick('padS')"></div>
+    <div id="padD" ng-click="padpick('padD')"></div>
+    <div id="padF" ng-click="padpick('padF')"></div>
+    <div id="padG" ng-click="padpick('padG')"></div>
+    <div id="padH" ng-click="padpick('padH')"></div>
+    <div id="padJ" ng-click="padpick('padJ')"></div>
+    <div id="padK" ng-click="padpick('padK')"></div>
+    <div id="padL" ng-click="padpick('padL')"></div>
+<!-- Row Four -->
+    <div id="padZ" ng-click="padpick('padZ')"></div>
+    <div id="padX" ng-click="padpick('padX')"></div>
+    <div id="padC" ng-click="padpick('padC')"></div>
+    <div id="padV" ng-click="padpick('padV')"></div>
+    <div id="padB" ng-click="padpick('padB')"></div>
+    <div id="padN" ng-click="padpick('padN')"></div>
+    <div id="padM" ng-click="padpick('padM')"></div>
 
-          </div>
-           <div id="pad3" ng-click="padpick('pad3')">
-
-          </div>
-           <div id="pad4" ng-click="padpick('pad4')">
-
-          </div>
-        </div>
-          <div class="row2">
-          <div id="pad5" ng-click="padpick('pad5')">
-              
-          </div>
-           <div id="pad6" ng-click="padpick('pad6')">
-                        
-            </div>
-           <div id="pad7" ng-click="padpick('pad7')">
-               
-          </div>
-           <div id="pad8" ng-click="padpick('pad8')">
-               
-          </div>
-        </div>
-          <div class="row3">
-          <div id="pad9" ng-click="padpick('pad9')">
-              
-          </div>
-           <div id="pad10" ng-click="padpick('pad10')">
-               
-          </div>
-           <div id="pad11" ng-click="padpick('pad11')">
-               
-          </div>
-           <div id="pad12" ng-click="padpick('pad12')">
-               
-          </div>
-        </div>
-          <div class="row4">
-          <div id="pad13" ng-click="padpick('pad13')">
-              
-          </div>
-           <div id="pad14" ng-click="padpick('pad14')">
-               
-          </div>
-           <div id="pad15" ng-click="padpick('pad15')">
-               
-          </div>
-           <div id="pad16" ng-click="padpick('pad16')">
-               
-          </div>
-        </div>
         
  
 </div>

@@ -1,281 +1,222 @@
-musicApp.controller('audioPlayController', function($scope, allNotes, $rootScope) {
- 
-    //set of letters to be set on board
-    $scope.keyHint = ['1','2','3','4','Q','W','E','R','A','S','D','F','Z','X','C','V']
-    //Toggle function
-    $scope.keyHints = function(){
-        if ($scope.keyHint[0] === '1'){
-            $scope.keyHint = ['','','','','','','','','','','','','','','','']
-        }
-        else {
-            $scope.keyHint = ['1','2','3','4','Q','W','E','R','A','S','D','F','Z','X','C','V']
-        }
-    };
-    
+musicApp.controller('audioPlayController', function($scope, allNotes, $rootScope, stopMusic) {
+
+
     //calls all the play functions in note class
     $scope.padplay = function(pad){
-        if (event.shiftKey){
-            allNotes[pad].loop();
-        }
-        else if ($scope.spam){
-            allNotes[pad].spam();
-        }
-        else{
-            allNotes[pad].play();
-        }
+        allNotes[pad].play();
     };
-    
-   //Master Volume slider logic to adjust volume
+
+    $scope.killSwitch = function(){
+      stopMusic();
+    }
+
+
+  /*//  Master Volume slider logic to adjust volume
     var slider = document.getElementById('volume');
     $scope.volume = .8;
     //HTML audio between 0 and 1 for 0 to 100%
     slider.noUiSlider.on('slide',function(){
         var volumeSlider = document.getElementById('volume');
-    
+
         $scope.volume = 1 - volumeSlider.noUiSlider.get();
         for (i = 1; i <= 16; i++){
             var pad = 'pad' + i;
             allNotes[pad].setVolume($scope.volume);
         }
-    });
-    
-    //Toggle of the letter 'J' being pressed
-    //TODO refactor out of controllers 
-    window.addEventListener('keydown', function(event) {
-        if (event.keyCode == 74){
-            $scope.spam = true;
-        }
-    });
-    window.addEventListener('keyup', function(event) {
-        if (event.keyCode == 74){
-            $scope.spam = false;
-        }
-    });
+    });*/
+
 });
 
 //seperate controller for keyboard input
-musicApp.controller('keyboardController', function($scope, allNotes, $rootScope) {
-    
-    //Toggle of the letter 'J' being pressed
-     //TODO refactor out of controllers 
+musicApp.controller('keyboardController', function($scope, allNotes, $rootScope, stopMusic, setVolume) {
+
+    //set volume at 8
+    $scope.volumeClass = 'volumeLevel8';
+    $scope.volumeLevel = 8;
+
+    //listens for shift to stop music
     window.addEventListener('keydown', function(event) {
-        if (event.keyCode == 74){
-            $scope.spam = true;
-        }
+      if (event.shiftKey) {
+        stopMusic();
+      }
     });
-    window.addEventListener('keyup', function(event) {
-        if (event.keyCode == 74){
-            $scope.spam = false;
-        }
-    });
-    
+
+    //Disable window scroll when arrow keys are pressed to adjust volume
+    window.addEventListener("keydown", function(event) {
+    // space and arrow keys
+    if([38, 40].indexOf(event.keyCode) > -1) {
+        event.preventDefault();
+    }
+}, false);
+
     //switch case for all possible keyboard presses
+    //also listens for arrow keys
     window.addEventListener('keydown', function(event) {
     if ($rootScope.editing){
         return;
     }
     switch (event.keyCode) {
     case 49: // 1
-        if (event.shiftKey){
-            allNotes.pad13.loop();
-        }
-        else if ($scope.spam){
-            allNotes.pad13.spam();
-        }
-        else{
-            allNotes.pad13.play();
-        }
+        allNotes.pad1.play();
         break;
     case 50: // 2
-        if (event.shiftKey){
-            allNotes.pad14.loop();
-        }
-        else if ($scope.spam){
-            allNotes.pad14.spam();
-        }
-        else{
-            allNotes.pad14.play();
-        }
+        allNotes.pad2.play();
         break;
     case 51: // 3
-        if (event.shiftKey){
-            allNotes.pad15.loop();
-        }else if ($scope.spam){
-            allNotes.pad15.spam();
-        }
-        else{
-            allNotes.pad15.play();
-        }
+        allNotes.pad3.play();
         break;
     case 52: // 4
-        if (event.shiftKey){
-            allNotes.pad16.loop();
-        }else if ($scope.spam){
-            allNotes.pad16.spam();
-        }
-        else{
-            allNotes.pad16.play();
-        }
+        allNotes.pad4.play();
+        break;
+    case 53: // 5
+        allNotes.pad5.play();
+        break;
+    case 54: // 6
+        allNotes.pad6.play();
+        break;
+    case 55: // 7
+        allNotes.pad7.play();
+        break;
+    case 56: // 8
+        allNotes.pad8.play();
+        break;
+    case 57: // 9
+        allNotes.pad9.play();
+        break;
+    case 48: // 0
+        allNotes.pad0.play();
+        break;
+    case 173: // -
+        allNotes.padDash.play();
+        break;
+    case 61: // =
+        allNotes.padEquals.play();
         break;
     case 81: // q
-        if (event.shiftKey){
-            allNotes.pad9.loop();
-        }else if ($scope.spam){
-            allNotes.pad9.spam();
-        }
-        else{
-            allNotes.pad9.play();
-        }
+        allNotes.padQ.play();
         break;
     case 87: // w
-        if (event.shiftKey){
-            allNotes.pad10.loop();
-        }else if ($scope.spam){
-            allNotes.pad10.spam();
-        }
-        else{
-            allNotes.pad10.play();
-        }
+        allNotes.padW.play();
         break;
     case 69: // e
-        if (event.shiftKey){
-            allNotes.pad11.loop();
-        }else if ($scope.spam){
-            allNotes.pad11.spam();
-        }
-        else{
-            allNotes.pad11.play();
-        }
+        allNotes.padE.play();
         break;
     case 82: // r
-        if (event.shiftKey){
-            allNotes.pad12.loop();
-        }else if ($scope.spam){
-            allNotes.pad12.spam();
-        }
-        else{
-            allNotes.pad12.play();
-        }
+        allNotes.padR.play();
+        break;
+    case 84: // t
+        allNotes.padT.play();
+        break;
+    case 89: // y
+        allNotes.padY.play();
+        break;
+    case 85: // u
+        allNotes.padU.play();
+        break;
+    case 73: // i
+        allNotes.padI.play();
+        break;
+    case 79: // o
+        allNotes.padO.play();
+        break;
+    case 80: // p
+        allNotes.padP.play();
         break;
     case 65: // a
-        if (event.shiftKey){
-            allNotes.pad5.loop();
-        }else if ($scope.spam){
-            allNotes.pad5.spam();
-        }
-        else{
-            allNotes.pad5.play();
-        }
+        allNotes.padA.play();
         break;
     case 83: // s
-        if (event.shiftKey){
-            allNotes.pad6.loop();
-        }else if ($scope.spam){
-            allNotes.pad6.spam();
-        }
-        else{
-            allNotes.pad6.play();
-        }
+        allNotes.padS.play();
         break;
     case 68: // d
-        if (event.shiftKey){
-            allNotes.pad7.loop();
-        }else if ($scope.spam){
-            allNotes.pad7.spam();
-        }
-        else{
-            allNotes.pad7.play();
-        }
+        allNotes.padD.play();
         break;
     case 70: // f
-        if (event.shiftKey){
-            allNotes.pad8.loop();
-        }else if ($scope.spam){
-            allNotes.pad8.spam();
-        }
-        else{
-            allNotes.pad8.play();
-        }
+        allNotes.padF.play();
+        break;
+    case 71: // g
+        allNotes.padG.play();
+        break;
+    case 72: // h
+        allNotes.padH.play();
+        break;
+    case 74: // j
+        allNotes.padJ.play();
+        break;
+    case 75: // k
+        allNotes.padK.play();
+        break;
+    case 76: // l
+        allNotes.padL.play();
         break;
     case 90: // z
-        if (event.shiftKey){
-            allNotes.pad1.loop();
-        }else if ($scope.spam){
-            allNotes.pad1.spam();
-        }
-        else{
-            allNotes.pad1.play();
-        }
+        allNotes.padZ.play();
         break;
     case 88: // x
-        if (event.shiftKey){
-            allNotes.pad2.loop();
-        }else if ($scope.spam){
-            allNotes.pad2.spam();
-        }
-        else{
-            allNotes.pad2.play();
-        }
+        allNotes.padX.play();
         break;
     case 67: // c
-        if (event.shiftKey){
-            allNotes.pad3.loop();
-        }else if ($scope.spam){
-            allNotes.pad3.spam();
-        }
-        else{
-            allNotes.pad3.play();
-        }
+        allNotes.padC.play();
         break;
     case 86: // v
-        if (event.shiftKey){
-            allNotes.pad4.loop();
-        }else if ($scope.spam){
-            allNotes.pad4.spam();
+        allNotes.padV.play();
+        break;
+    case 66: // b
+        allNotes.padB.play();
+        break;
+    case 78: // n
+        allNotes.padN.play();
+        break;
+    case 77: // m
+        allNotes.padM.play();
+        break;
+    case 38: // up arrow
+        if ($scope.volumeLevel < 10){
+            //incremenets, concat string for class, and applies
+            $scope.volumeLevel++;
+            $scope.$apply(function () {
+                $scope.volumeClass = 'volumeLevel' + $scope.volumeLevel;
+            });
+            setVolume($scope.volumeLevel * .1);
+            //multiply by .1 cause HTML range is [0,1]
         }
-        else{
-            allNotes.pad4.play();
+        break;
+    case 40: // down arrow
+        if ($scope.volumeLevel > 0){
+            //decremenets, concat string for class, and applies
+            $scope.volumeLevel--;
+            $scope.$apply(function () {
+                $scope.volumeClass = 'volumeLevel' + $scope.volumeLevel;
+            });
+            setVolume($scope.volumeLevel * .1);
+            //multiply by .1 cause HTML range is [0,1]
         }
-        break;      
-
+        break;
   }
 }, false);
-    
+
 });
 
 
 
-musicApp.controller('infoController', function($scope, allNotes, $rootScope) {
-    
+musicApp.controller('infoController', function($scope, allNotes, $rootScope, stopMusic) {
+
     //toggle for edit pad mode
     $scope.editPad = function(){
         if ($scope.editing){
             $rootScope.editing = false;
         }
         else {
-            
+
             //stops all tracks before going to edit
-            for (i = 1; i <= 16; i++){
-                var pad = 'pad' + i;
-                allNotes[pad].stop();
-            }
-            $rootScope.editing = true;       
+            stopMusic();
+            $rootScope.editing = true;
         }
     }
-  
-    //toggle for color slider changing screen
-    $scope.colorSwitch = function(){
-        if(!$scope.newColor){
-            $scope.newColor = true;   
-        }
-        else{
-            $scope.newColor = false;
-        }
-    }
-  
+
 });
 
-musicApp.controller('editController', function($scope, $http, allNotes){ 
+musicApp.controller('editController', function($scope, $http, allNotes){
     //padPicked = toggle
     //padSelect = scope of the pad
     $scope.padpick = function(pad){
@@ -287,13 +228,24 @@ musicApp.controller('editController', function($scope, $http, allNotes){
         $scope.padPicked = false;
     }
     //grabs data from local directory for the time being
-    $http.get('js/songData.json').success(function(data) { 
+    $http.get('js/songData.json').success(function(data) {
         $scope.songList = data;
     });
+    
+    //grabs songs out of folder
+    $scope.showFolder = function(folder){
+        $scope.folderDisplay = folder;
+    }
+    
     //calls to concat string for pathfile
-    $scope.songPick = function(songUrl){
-        allNotes[$scope.padSelect].setMusic(songUrl);
+    $scope.songPick = function(songUrl, name){
+        
+        allNotes[$scope.padSelect].setMusic(songUrl, name);
         $scope.padPicked = false;
+       
+        //uncomment if we to start picking process each time
+        /* $scope.folder = '';
+        $scope.folderDisplay = '';*/
     }
     //calls for information of current song on pad
     $scope.currentSong = function(pad){
@@ -301,4 +253,12 @@ musicApp.controller('editController', function($scope, $http, allNotes){
             return allNotes[pad].getMusic();
         }
     }
+    
+    $scope.getAction = function(){
+        return allNotes[$scope.padSelect].getAction();
+    }
+    
+    $scope.actionChange = function(type) {
+        allNotes[$scope.padSelect].setAction(type);
+    };
 });
