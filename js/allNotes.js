@@ -27,6 +27,9 @@ musicApp.service('allNotes', function (Note) {
     var padI = new Note('padI', 73, 'trigger', './MusicSections/Pop Culture/PopCultureBeat.mp3', 'Pop Culture Beat');
     var padO = new Note('padO', 79, 'trigger', './MusicSections/Pop Culture/snareBeat.mp3', 'Snare Beat');
     var padP = new Note('padP', 80, 'trigger', './MusicSections/Pop Culture/snareBreak.mp3', 'Snare Break');
+    var padLeftBracket = new Note('padLeftBracket', 219, 'trigger', './MusicSections/Pop Culture/snareBreak.mp3', 'Snare Break');
+    var padRightBracket = new Note('padRightBracket', 221, 'trigger', './MusicSections/Pop Culture/snareBreak.mp3', 'Snare Break');
+    var padBackslash = new Note('padBackslash', 220, 'trigger', './MusicSections/Pop Culture/snareBreak.mp3', 'Snare Break');
     var padA = new Note('padA', 65, 'trigger', './MusicSections/Pop Culture/takeItOff.mp3', 'Take It Off');
     var padS = new Note('padS', 83, 'trigger', './MusicSections/Pop Culture/vivaLaVida.mp3', 'Viva La Vida');
     var padD = new Note('padD', 68, 'trigger', './MusicSections/Pop Culture/voca.mp3', 'Voca');
@@ -36,6 +39,7 @@ musicApp.service('allNotes', function (Note) {
     var padJ = new Note('padJ', 74, 'trigger', './MusicSections/Pop Culture/wow4.mp3', 'Wow 4');
     var padK = new Note('padK', 75, 'trigger', './MusicSections/Pop Culture/wow6.mp3', 'Wow 6');
     var padL = new Note('padL', 76, 'trigger', './MusicSections/Pop Culture/wowEnd.mp3', 'Wow End');
+    var padSemicolon = new Note('padSemicolon', 59, 'trigger', './MusicSections/Pop Culture/snareBreak.mp3', 'Snare Break');
     var padZ = new Note('padZ', 90, 'trigger', './MusicSections/Pop Culture/wowplus1.mp3', 'Wow Plus 1');
     var padX = new Note('padX', 88, 'trigger', './MusicSections/Extra/23.mp3', '23');
     var padC = new Note('padC', 67, 'trigger', './MusicSections/Extra/Pinball.mp3', 'Pinball');
@@ -43,6 +47,8 @@ musicApp.service('allNotes', function (Note) {
     var padB = new Note('padB', 66, 'trigger', './MusicSections/Drum Kit/Cymbol.mp3', 'Cymbol');
     var padN = new Note('padN', 78, 'trigger', './MusicSections/Drum Kit/Kick Drum.mp3', 'Kick Drum');
     var padM = new Note('padM', 77, 'trigger', './MusicSections/Drum Kit/Snare Drum.mp3', 'Snare Drum');
+    var padComma = new Note('padComma', 188, 'trigger', './MusicSections/Pop Culture/snareBreak.mp3', 'Snare Break');
+    var padPeriod = new Note('padPeriod', 190, 'trigger', './MusicSections/Pop Culture/snareBreak.mp3', 'Snare Break');
 
      // return data object to controllers
     return {
@@ -68,6 +74,9 @@ musicApp.service('allNotes', function (Note) {
         padI: padI,
         padO: padO,
         padP: padP,
+        padLeftBracket: padLeftBracket,
+        padRightBracket: padRightBracket,
+        padBackslash: padBackslash,
         padA: padA,
         padS: padS,
         padD: padD,
@@ -77,12 +86,15 @@ musicApp.service('allNotes', function (Note) {
         padJ: padJ,
         padK: padK,
         padL: padL,
+        padSemicolon: padSemicolon,
         padZ: padZ,
         padX: padX,
         padC: padC,
         padV: padV,
         padB: padB,
         padN: padN,
-        padM: padM
+        padM: padM,
+        padComma: padComma,
+        padPeriod: padPeriod
     };
 });

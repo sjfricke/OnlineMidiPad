@@ -49,14 +49,14 @@ Design and support by: Brady Boettcher
 
             <p>Stop pads once they're playing by pressing SHIFT</p>
 
-            <p>All keys in red outline are playable. (currently only most)</p>
-        
+            <p>All keys in red outline are playable.</p>
+
         </div>
         <!--Div button for editing pad section-->
         <div id="editPad" class="hovering active" ng-click="editPad()"> <br> Edit Keys <br>
-            <text style="font-size: 50%; color: red;" ng-show="editing">Editing mode</text> 
+            <text style="font-size: 50%; color: red;" ng-show="editing">Editing mode</text>
         </div>
-        
+
     </div>
 
     <div ng-controller="audioPlayController as audio" ng-hide="editing" ng-cloak>
@@ -73,7 +73,7 @@ Design and support by: Brady Boettcher
     </div>
       <!--hold editing directive-->
       <pad-edit ng-show="editing"></pad-edit>
-      
+
     <div ng-controller="keyboardController"><!--holds keyboard logic-->
         <div ng-class="volumeClass"></div>
     </div>

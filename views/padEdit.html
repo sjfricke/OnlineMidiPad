@@ -9,18 +9,18 @@
             <button ng-click="actionChange('repeat')">Repeat</button>
             <button ng-click="actionChange('toggle')">Toggle</button>
             [Current Action Type: {{getAction()}}]
-        </div>  
+        </div>
         <br><br>
         <select id="select" type="select" ng-model="folder" ng-options="key for (key, value) in songList" ng-click="showFolder(folder)">
             <option value='' disabled selected style='display:none;'>Select Folder</option>
         </select>
         </div>
-    
+
         <ul id="selectionUL" ng-repeat="song in folderDisplay">
             <li id="selectionLI" class="hovering active" ng-click="songPick(song.path, song.name)">{{song.name}}</li>
         </ul>
     </div>
-    
+
     <img id="pad" src="img/keyboard.jpg"/>
     <img id="outline" src="img/keyboardOutline.png"/>
     <div id="editNotice">
@@ -50,6 +50,9 @@
     <div id="padI" ng-click="padpick('padI')"></div>
     <div id="padO" ng-click="padpick('padO')"></div>
     <div id="padP" ng-click="padpick('padP')"></div>
+    <div id="padLeftBracket" ng-click="padpick('padLeftBracket')"></div>
+    <div id="padRightBracket" ng-click="padpick('padRightBracket')"></div>
+    <div id="padBackslash" ng-click="padpick('padBackslash')"></div>
 <!-- Row Three -->
     <div id="padA" ng-click="padpick('padA')"></div>
     <div id="padS" ng-click="padpick('padS')"></div>
@@ -60,6 +63,7 @@
     <div id="padJ" ng-click="padpick('padJ')"></div>
     <div id="padK" ng-click="padpick('padK')"></div>
     <div id="padL" ng-click="padpick('padL')"></div>
+    <div id="padSemicolon" ng-click="padpick('padSemicolon')"></div>
 <!-- Row Four -->
     <div id="padZ" ng-click="padpick('padZ')"></div>
     <div id="padX" ng-click="padpick('padX')"></div>
@@ -68,7 +72,9 @@
     <div id="padB" ng-click="padpick('padB')"></div>
     <div id="padN" ng-click="padpick('padN')"></div>
     <div id="padM" ng-click="padpick('padM')"></div>
+    <div id="padComma" ng-click="padpick('padComma')"></div>
+    <div id="padPeriod" ng-click="padpick('padPeriod')"></div>
 
-        
- 
+
+
 </div>

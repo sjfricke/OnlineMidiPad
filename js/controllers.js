@@ -122,6 +122,15 @@ musicApp.controller('keyboardController', function($scope, allNotes, $rootScope,
     case 80: // p
         allNotes.padP.play();
         break;
+    case 219: // LeftBracket
+        allNotes.padLeftBracket.play();
+        break;
+    case 221: // RightBracket
+        allNotes.padRightBracket.play();
+        break;
+    case 220: // Backslash
+        allNotes.padBackslash.play();
+        break;
     case 65: // a
         allNotes.padA.play();
         break;
@@ -149,6 +158,9 @@ musicApp.controller('keyboardController', function($scope, allNotes, $rootScope,
     case 76: // l
         allNotes.padL.play();
         break;
+    case 59: // Semicolon
+        allNotes.padSemicolon.play();
+        break;
     case 90: // z
         allNotes.padZ.play();
         break;
@@ -169,6 +181,12 @@ musicApp.controller('keyboardController', function($scope, allNotes, $rootScope,
         break;
     case 77: // m
         allNotes.padM.play();
+        break;
+    case 188: // Comma
+        allNotes.padComma.play();
+        break;
+    case 190: // Period
+        allNotes.padPeriod.play();
         break;
     case 38: // up arrow
         if ($scope.volumeLevel < 10){
@@ -231,18 +249,18 @@ musicApp.controller('editController', function($scope, $http, allNotes){
     $http.get('js/songData.json').success(function(data) {
         $scope.songList = data;
     });
-    
+
     //grabs songs out of folder
     $scope.showFolder = function(folder){
         $scope.folderDisplay = folder;
     }
-    
+
     //calls to concat string for pathfile
     $scope.songPick = function(songUrl, name){
-        
+
         allNotes[$scope.padSelect].setMusic(songUrl, name);
         $scope.padPicked = false;
-       
+
         //uncomment if we to start picking process each time
         /* $scope.folder = '';
         $scope.folderDisplay = '';*/
@@ -253,11 +271,11 @@ musicApp.controller('editController', function($scope, $http, allNotes){
             return allNotes[pad].getMusic();
         }
     }
-    
+
     $scope.getAction = function(){
         return allNotes[$scope.padSelect].getAction();
     }
-    
+
     $scope.actionChange = function(type) {
         allNotes[$scope.padSelect].setAction(type);
     };

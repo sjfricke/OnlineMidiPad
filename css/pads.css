@@ -197,6 +197,33 @@
   left: 61.62em;
   top: 15.8em;
 }
+#padLeftBracket{
+  position: absolute;
+  background-color: inherit;
+  border-radius: .5em;
+  width: 4.9em;
+  height: 4.67em;
+  left: 67.30em;
+  top: 15.8em;
+}
+#padRightBracket{
+  position: absolute;
+  background-color: inherit;
+  border-radius: .5em;
+  width: 4.9em;
+  height: 4.67em;
+  left: 73.07em;
+  top: 15.8em;
+}
+#padBackslash{
+  position: absolute;
+  background-color: inherit;
+  border-radius: .5em;
+  width: 4.9em;
+  height: 4.67em;
+  left: 78.82em;
+  top: 15.8em;
+}
 #padA{
   position: absolute;
   background-color: inherit;
@@ -278,6 +305,15 @@
   left: 57.3em;
   top: 21.37em;
 }
+#padSemicolon{
+  position: absolute;
+  background-color: inherit;
+  border-radius: .5em;
+  width: 4.9em;
+  height: 4.67em;
+  left: 63.05em;
+  top: 21.37em;
+}
 #padZ{
   position: absolute;
   background-color: inherit;
@@ -341,7 +377,24 @@
   left: 48.7em;
   top: 26.94em;
 }
-
+#padComma{
+  position: absolute;
+  background-color: inherit;
+  border-radius: .5em;
+  width: 4.9em;
+  height: 4.67em;
+  left: 54.45em;
+  top: 26.94em;
+}
+#padPeriod{
+  position: absolute;
+  background-color: inherit;
+  border-radius: .5em;
+  width: 4.9em;
+  height: 4.67em;
+  left: 60.2em;
+  top: 26.94em;
+}
 /*Function Keys*/
 #padShiftLeft{
   position: absolute;
@@ -350,9 +403,9 @@
   width: 12.1em;
   height: 4.67em;
   left: 1.2em;
-  top: 26.94em; 
+  top: 26.94em;
 
-  text-align: center;  
+  text-align: center;
 }
 #padShiftRight{
   position: absolute;
@@ -367,7 +420,7 @@
 }
 
 
-#pad1:hover, #pad2:hover, #pad3:hover, #pad4:hover, #pad5:hover, #pad6:hover, #pad7:hover, #pad8:hover, #pad9:hover, #pad0:hover, #padDash:hover, #padEquals:hover, #padQ:hover, #padW:hover, #padE:hover, #padR:hover, #padT:hover, #padY:hover, #padU:hover, #padI:hover, #padO:hover, #padP:hover, #padA:hover, #padS:hover, #padD:hover, #padF:hover, #padG:hover, #padH:hover, #padJ:hover, #padK:hover, #padL:hover, #padZ:hover, #padX:hover, #padC:hover, #padV:hover, #padN:hover, #padM:hover, #padShiftRight:hover, #padShiftLeft:hover{
+#pad1:hover, #pad2:hover, #pad3:hover, #pad4:hover, #pad5:hover, #pad6:hover, #pad7:hover, #pad8:hover, #pad9:hover, #pad0:hover, #padDash:hover, #padEquals:hover, #padQ:hover, #padW:hover, #padE:hover, #padR:hover, #padT:hover, #padY:hover, #padU:hover, #padI:hover, #padO:hover, #padP:hover, #padLeftBracket:hover, #padRightBracket:hover, #padBackslash:hover, #padA:hover, #padS:hover, #padD:hover, #padF:hover, #padG:hover, #padH:hover, #padJ:hover, #padK:hover, #padL:hover, #padSemicolon:hover, #padZ:hover, #padX:hover, #padC:hover, #padV:hover, #padB:hover, #padN:hover, #padM:hover, #padComma:hover, #padPeriod:hover, #padShiftRight:hover, #padShiftLeft:hover{
     background-color: aliceblue;
     cursor: pointer;
 }
