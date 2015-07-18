@@ -87,10 +87,10 @@ musicApp.controller('keyboardController', function($scope, allNotes, $rootScope,
     case 48: // 0
         allNotes.pad0.play();
         break;
-    case 189: // -
+    case 189, 173: // -
         allNotes.padDash.play();
         break;
-    case 187: // =
+    case 187, 61: // =
         allNotes.padEquals.play();
         break;
     case 81: // q
@@ -159,7 +159,7 @@ musicApp.controller('keyboardController', function($scope, allNotes, $rootScope,
     case 76: // l
         allNotes.padL.play();
         break;
-    case 186: // Semicolon
+    case 186, 59: // Semicolon
         allNotes.padSemicolon.play();
         break;
     case 90: // z

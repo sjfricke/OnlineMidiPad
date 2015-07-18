@@ -404,7 +404,12 @@
   height: 4.67em;
   left: 1.2em;
   top: 26.94em;
-
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
   text-align: center;
 }
 #padShiftRight{
@@ -415,7 +420,12 @@
   height: 4.67em;
   left: 71.7em;
   top: 26.94em;
-
+  -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
   text-align: center;
 }
 

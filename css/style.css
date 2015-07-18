@@ -14,7 +14,12 @@ overflow: hidden;
     left: 2em;
     position: absolute;
     z-index: 1;
-
+    -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
 	width: 100%;
 	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
 	filter: alpha(opacity=50);
@@ -78,6 +83,12 @@ overflow: hidden;
     top: 33px;
     text-align: center;
     z-index: 3;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 #editPad:hover{
     background-color: aliceblue;
@@ -149,12 +160,16 @@ overflow: hidden;
 
 
 #volume {
-    background-color: ghostwhite;
-    height: 200px;
     position: absolute;
-    right: 83px;
+    left: 73.8em;
     z-index: 5;
-    top: 290px;
+    top: 34.3em;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 /* ------------------------------------------------------------------------------------------------------
